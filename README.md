@@ -58,6 +58,7 @@
 - [FZNet](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf)
 
 AlexNet复杂模型的内部运作和行为，或它们如何取得如此好的性能，仍然没有什么深入了解。你如此优秀，我还不知道你为什么这么优秀。嗯，我必须要了解你一下。「🤔」
+
  [论文理解](/notes/FZNet.md)
 
 - [ZFNet](https://arxiv.org/abs/1311.2901)
@@ -230,6 +231,7 @@ Transformer由论文《Attention is All You Need》提出，现在是谷歌云TP
 3. 但作者发现当在更大规模的数据集上pretrain后，再transfer 到其他任务上，Transformer却可以表现得更好。
 
  [论文理解](/notes/ViT.md)
+ 
 - [Swin Transformer](https://arxiv.org/abs/2103.14030)
 
 代码：[语义分割](https://github.com/SwinTransformer/Swin-Transformer-Semantic-Segmentation)，[图像分类](https://github.com/microsoft/Swin-Transformer)，[目标检测](https://github.com/SwinTransformer/Swin-Transformer-Object-Detection)

@@ -34,13 +34,13 @@ Continuously updated ......
 
 
 
-* [Image classification](#Imageclassification)
-* [Object detection](#Object detection)
-* [Image Segmentation](#Image Segmentation
-* [Medical imaging-related](#Medical imaging-related)
-* [Attention mechanism in CV](#Attention mechanism in CV)
-* [Others(#Others)
-* [Data Sets](#Data Sets)
+* [Image classification](#Image-classification)
+* [Object detection](#Objec-detection)
+* [Image Segmentation](#Image-Segmentation)
+* [Medical imaging-related](#Medical-imaging-related)
+* [Attention mechanism in CV](#Attention-mechanism-in-CV)
+* [Others](#Others)
+* [Data Sets](#Data-Sets)
 
 
 
@@ -58,6 +58,7 @@ Continuously updated ......
 - [FZNet](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf)
 
  There is still little insight into the inner workings and behavior of AlexNet's complex models, or how they achieve such good performance. You are so good, and I still don't know why you are so good. Well, I have to get to know you a little bit.「🤔」
+ 
  [Personal understanding](/notes/FZNet.md)
 
 - [ZFNet](https://arxiv.org/abs/1311.2901)
@@ -116,7 +117,7 @@ Continuously updated ......
 
 
 
-## Object detection
+## Object-detection
  The RCNN family includes RCNN, Fast RCNN, Faster RCNN, Mask RCNN
 
 YOLO series includes YOLO v1, YOLO v2, YOLO v3 and SSD
@@ -189,7 +190,7 @@ So SPPNet has been improved for two shortcomings of R-CNN：
 　　To summarize, the original intention of SPP-net is very clear, that is, we hope that the network is more flexible to the size of the input, the analysis to the convolutional network does not require the size, the requirement of fixed size comes entirely from the fully connected layer part, and thus with the help of spatial pyramid pooling to bridge the two, SPP-net in the field of detection is an important contribution to avoid the deformation of R-CNN, repeated computation and other problems, in the case of the effect does not decay, significantly improve the recognition speed.
 
 
-## 图像分割
+## Image-Segmentation
 - [FCN](https://arxiv.org/abs/1411.4038)
 
 （CVPR 2015 best paper honorable mention）If you know classification networks, then you will understand segmentation networks quickly, because classification networks predict a picture into a class, while segmentation networks predict every pixel of a picture, which is actually the same.
@@ -200,7 +201,7 @@ So SPPNet has been improved for two shortcomings of R-CNN：
 
  [Personal understanding](/notes/DeepLab.md)
 
-## 医学影像相关
+## Medical-imaging-related
 [DeepLung](https://arxiv.org/abs/1801.09555)
 
 Project ：https://github.com/wentaozhu/DeepLung、https://github.com/uci-cbcl/DeepLung
@@ -208,7 +209,7 @@ Project ：https://github.com/wentaozhu/DeepLung、https://github.com/uci-cbcl/D
  A fully automated lung CT cancer diagnosis system DeepLung is proposed.DeepLung consists of two parts, nodule detection (identifying candidate nodule locations) and classification (classifying candidate nodules as benign or malignant). Considering the 3D nature of lung CT data and the compressibility of dual path network (DPN), two deep 3D DPNs were designed for nodule detection and regression, respectively. Specifically, a Faster RCNN with 3D dual-path blocks and U-net type encoding-decoding structure is used to learn nodule features efficiently. For nodule classification, a gradient boosting machine (GBM) with 3D dual-path network features is proposed. The nodule classification subnetwork is validated on a public dataset complex of LIDC-IDRI, achieving better performance than state-of-the-art and outperforming experienced doctors on image-based patterns. In the DeepLung system, candidate nodules are first detected by the nodule detection subnetwork, and then the nodule diagnosis is done using the classification subnetwork. Extensive experimental results show that DeepLung performs comparably to experienced physicians for both node-level and patient-level diagnosis on the LIDC-IDRI dataset.
 
 
-## CV中的Attention机制
+## Attention-mechanism-in-CV
 - [Transformer](https://arxiv.org/abs/1706.03762)
 
  Transformer was proposed by the paper "Attention is All You Need" and is now the recommended reference model for Google Cloud TPU.
@@ -256,7 +257,7 @@ The architecture incorporates self-attention for a variety of computer vision ta
 For all tasks, applying GPT-3 does not require any gradient updating or fine-tuning, but simply specifying the task and a small number of presentations by interacting with the model's text. GPT-3 has excellent performance on many NLP datasets, including translation, question-answering and completion tasks, as well as some tasks that require on-the-fly inference or domain adaptation.
 
 
-## Data Sets
+## Data-Sets
 
 * [ImageNet](#ImageNett)
 * [COCO](#COCO)
