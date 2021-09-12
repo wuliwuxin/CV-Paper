@@ -7,11 +7,11 @@ Continuously updated ......
 
 ## Introduction
 ### Required Content -- Books
-1. [Machine Learning](./book)" by Mr. Zhou Zhihua, "Watermelon Book". Formula derivation companion using ["Pumpkin Book"](https://datawhalechina.github.io/pumpkin-book/#/)
+1. ["Machine Learning"](./book) by Mr. Zhou Zhihua, "Watermelon Book". Formula derivation companion using ["Pumpkin Book"](https://datawhalechina.github.io/pumpkin-book/#/)
 
 2. ["Statistical learning methods"](./book)--Mr. Li Hang.
 
-3. " Flower book "[-deep learning](./book)--The 2018 Turing Award dive into the AI bible.
+3. " Flower book "--[deep learning](./book)--The 2018 Turing Award dive into the AI bible.
 
 4. ["Dive into Deep Learning"](https://zh-v2.d2l.ai/)--Mr. Li Mu (Mu Shen) of Amazon team make deep learning approachable, teaching you the concepts, the context, and the code.
 
@@ -73,6 +73,7 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 ![](/picture/VGG.png)
 
 "Very Deep Convolutional Networks for Large-Scale Image Recognition", although not the winner of that year's ImageNet competition (the winner of that year was GoogLeNet), VGGNet had an important impact on the later ResNet and Inception.
+
  [Personal understanding](/notes/VGG.md)
 
 - [GoogleNet](https://arxiv.org/abs/1409.4842)和[Inception V3](https://arxiv.org/abs/1512.00567)
@@ -147,7 +148,9 @@ Some disadvantages and shortcomings of RCNN and SPPnet:
 - **The training process is a multi-stage pipeline**. The RCNN is first fine-tuned using log loss on a given region proposal. Then the features extracted from the convolutional neural network are trained to the SVM classifier, using SVM instead of softmax which is commonly used in neural network classification algorithms. the third part is the regression of the learning detection frame.
 
 - **Training requires a lot of space and time**， Since the training process requires writing the features extracted by the convolutional neural network to disk, a large amount of physical storage space is required and the training process is very slow.
+
 - **Very slow detection process**，At test time, features are extracted from each target candidate frame in each test image.
+
 RCNN mainly inputs each regional proposal of each image into the CNN" network for computation, without and retrograde corresponding shared computation, while SPPnet uses shared convolutional computation to accelerate the detection process of RCNN, SPPnet inputs the whole image into the CNN network to get the feature map, and then uses the spatial pyramid pooling network to process the feature map of each regional proposal region to get the fixed dimensional feature vector, and then trains the SVM classifier.
 
 
@@ -186,6 +189,7 @@ A: The computation of the fully connected layer is actually equivalent to inner-
 
 
 The shortcomings of RCNN are:
+
 - Each image extracts about 2,000 candidate regions (Region Proposal), and each Region Proposal uses CNN repeatedly to extract features, so a lot of time is spent in the feature extraction phase.
 - Since the input dimension of the fully connected layer is fixed, it must be resized (crop/wrap) for Region Proposal to perform feature extraction, which results in loss of image information and image deformation and affects the accuracy of feature extraction.
 
@@ -239,6 +243,7 @@ Project ：https://github.com/wentaozhu/DeepLung、https://github.com/uci-cbcl/D
 3. However, the authors found that when pretraining on a larger dataset and then transferring to other tasks, the Transformer performed better.
 
  [Personal understanding](/notes/ViT.md)
+ 
 - [Swin Transformer](https://arxiv.org/abs/2103.14030)
 
 代码：[Semantic segmentation](https://github.com/SwinTransformer/Swin-Transformer-Semantic-Segmentation)，[Image classification](https://github.com/microsoft/Swin-Transformer)，[Object detection](https://github.com/SwinTransformer/Swin-Transformer-Object-Detection)
@@ -280,6 +285,7 @@ For all tasks, applying GPT-3 does not require any gradient updating or fine-tun
 - Number of images with SIFT features: 1.2 million
 
 ### [COCO](https://paperswithcode.com/dataset/coco)
+
  The MS COCO (Microsoft Common Objects in Context) dataset is a large-scale object detection, segmentation, key-point detection, and captioning dataset. The dataset consists of 328K images.
 
  Splits: The first version of MS COCO dataset was released in 2014. It contains 164K images split into training (83K), validation (41K) and test (41K) sets. In 2015 additional test set of 81K images was released, including all the previous test images and 40K new images.
@@ -308,6 +314,7 @@ For all tasks, applying GPT-3 does not require any gradient updating or fine-tun
 ### PASCAL-VOC
 
 PASCAL VOC: The dataset is a relatively well-known dataset in the field of target detection, which is divided into two subsets, VOC2007 and VOC2012, and its official download address is as follows：
+
 * [VOC2007-trainval](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar)
 * [VOC2007-test](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar)
 * [VOC2012-trainval](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)

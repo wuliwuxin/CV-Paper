@@ -123,9 +123,10 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 
 
 ## 目标检测
-RCNN系列中包括RCNN, Fast RCNN, Faster RCNN, Mask RCNN
 
-YOLO系列包括YOLO v1, YOLO v2, YOLO v3 以及SSD
+RCNN系列中包括**RCNN, Fast RCNN, Faster RCNN, Mask RCNN**
+
+YOLO系列包括**YOLO v1, YOLO v2, YOLO v3 以及SSD**
 
 - [RNN](http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/)
 
@@ -144,8 +145,11 @@ YOLO系列包括YOLO v1, YOLO v2, YOLO v3 以及SSD
 RCNN与SPPnet一些缺点与不足：
 
 - **训练过程是一个multi-stage pipline**. RCNN首先在给定的region proposal上使用log损失进行微调。然后将卷积神经网络提取到的特征训练SVM分类器，利用SVM替代神经网络分类算法中常用的softmax。第三部分就是学习检测框的回归。
+
 - **训练需要大量的空间与时间**， 由于训练过程中需要将卷积神经网络提取的特征写入磁盘，因此需要大量的物理存储空间，训练过程十分缓慢。
+
 - **检测过程非常缓慢**，在测试时，从每个测试图像中的每个目标候选框提取特征。
+
 RCNN主要对于每张图像的每个region proposal都输入CNN“网络进行计算，没有及逆行相应的共享计算，而SPPnet是利用共享卷积计算的方式来加速RCNN的检测过程，SPPnet将整张图片输入CNN网络得到特征图，然后利用空间金字塔池化网络对每个region proposal区域的特征图进行处理得到固定维度的特征向量，然后训练SVM分类器。
 
 为解决上述优点， Fast RCNN主要贡献在于：
@@ -181,12 +185,15 @@ github(PyTorch): https://github.com/yueruchen/sppnet-pytorch
 答：全连接层的计算其实相当于输入的特征图数据矩阵和全连接层权值矩阵进行内积。在配置一个网络时，全连接层的参数维度是固定的，所以两个矩阵要能够进行内积，则输入的特征图的数据矩阵维数也需要固定[X1][X2]。
 
 RCNN的不足之处就是：
-- 每一张图片会提取大约2千个候选区域（region Proposal），针对每个Region Proposal 都重复的使用 CNN提取特征，因此会在特征提取阶段耗费大量的时间
+- 每一张图片会提取大约2千个候选区域（region Proposal），针对每个Region Proposal 都重复的使用 CNN提取特征，因此会在特征提取阶段耗费大量的时间。
+
 - 由于全连接层的输入维度是固定的，所以必须 resize（crop/wrap），Region Proposal 才能进行特征提取，结果会导致丢失图像信息和图片形变，影响特征提取的准确率。
 
 所以SPPNet 针对R-CNN两处不足做了改进：
 - 将Selective Search的Region Proposal不放入CNN进行特征提取，而是直接把原图片放入CNN进行特征提取，然后根据 Region Proposal位置在 conv5 的 feature map 做一个特征映射，再截取出每一个Region Proposal 所映射的 feature map。这样就避免了重复性用 CNN 对每个 Region Proposal 单独提取特征，减少了大量时间。
+
 - SPPNet 在原来的CNN的conv5之后加入了 Spatial  Pyramid Pooling layer（空间金字塔池化层）替换掉原来的 Pooling5 layer，由于SPP layer 可以接受不同 size 的feature maps 并输出相同 size 的feature maps，因此避免了 resize而导致的图片形变问题。
+
 　　总结一下，SPP-net的初衷非常明晰，就是希望网络对输入的尺寸更加灵活，分析到卷积网络对尺寸并没有要求，固定尺寸的要求完全来源于全连接层部分，因而借助空间金字塔池化的方法来衔接两者，SPP-net 在检测领域的重要贡献是避免了R-CNN的变形，重复计算等问题，在效果不衰减的情况下，大幅提高了识别速度。
 
 
@@ -278,6 +285,7 @@ Transformer由论文《Attention is All You Need》提出，现在是谷歌云TP
  - 具有SIFT特征的图像数量。1.2百万
 
 ### [COCO](https://paperswithcode.com/dataset/coco)
+
  MS COCO（Microsoft Common Objects in Context）数据集是一个大规模的物体检测、分割、关键点检测和字幕数据集。该数据集由328K图像组成。
 
  分割。MS COCO数据集的第一个版本是在2014年发布的。它包含16.4万张图像，分为训练（83K）、验证（41K）和测试（41K）集。2015年，又发布了81K的测试集，包括所有以前的测试图像和40K的新图像。
