@@ -47,6 +47,8 @@
 ## 图像分类
 - [LeNet](https://ieeexplore.ieee.org/document/726791)
 
+![](/picture/LeNet-5.png)
+
  1998年《Gradient-Based Learning Applied to Document Recognition》 CNN的开山之作，也是手写体识别经典论文。只要包含了卷积层的网络都可理解为卷积神经网络
 
 - [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
@@ -305,3 +307,15 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 * [VOC2007-test](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar)
 * [VOC2012-trainval](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 官网时常不稳定，进而导致下载较慢甚至下载失败，推荐一定稳定的镜像源地址：[YOLOv3作者主页](https://pjreddie.com/projects/pascal-voc-dataset-mirror/)
+
+
+## 赞助和支持
+
+如果你觉得它对你很有帮助, 请你也分享给需要学习的朋友们。
+
+如果你看好我的经验分享, 也请考虑适当的赞助打赏, 让我能继续分享更好的内容给大家。
+
+
+|支付宝|微信|
+|---|---|
+|![](/picture/AliPlay.jpg)|![](/picture/wechatPlay.jpg)|

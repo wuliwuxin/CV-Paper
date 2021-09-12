@@ -47,6 +47,8 @@ Continuously updated ......
 ## Image-classification
 - [LeNet](https://ieeexplore.ieee.org/document/726791)
 
+![](/picture/LeNet-5.png)
+
  In 1998, "Gradient-Based Learning Applied to Document Recognition" was the pioneering work of CNN and the classic paper on handwriting recognition. Any network that contains a convolutional layer can be understood as a convolutional neural network.
 
 - [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
@@ -306,3 +308,14 @@ PASCAL VOC: The dataset is a relatively well-known dataset in the field of targe
 * [VOC2007-test](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar)
 * [VOC2012-trainval](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 Official website is often unstable, which leads to slow download or even download failure, we recommend a certain stable mirror source address：[YOLOv3 Author's Home Page](https://pjreddie.com/projects/pascal-voc-dataset-mirror/)
+
+## Support
+
+If you find it helpful, please share it with your friends who need to learn.
+
+If you like my experience, please consider sponsoring me so that I can continue to share better content with you.
+
+
+|AliPay|WeChat|
+|---|---|
+|![](/picture/AliPlay.jpg)|![](/picture/wechatPlay.jpg)|
