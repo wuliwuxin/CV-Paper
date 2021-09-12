@@ -6,10 +6,11 @@ tags: 论文
 summary: AlexNet提出了一种可视化方法，展示了如何使用这些可视化来调试模型的问题以获得更好的结果。
 categories: 计算机视觉
 ---
-# 带你读论文系列之计算机视觉--FZNet
+# 带你读论文系列之计算机视觉--ZFNet
 
 ## 回顾
-[《带你读论文系列之计算机视觉--AlexNet》](/notes/AlexNet.md)
+[《带你读论文系列之计算机视觉--AlexNet》](/notes/ZFNet.md)
+
 
 Convolutional Network表现好：
 - 更大的训练集的可用性，有数百万的标记样本；
@@ -116,14 +117,14 @@ Convolutional Network表现好：
 - 图像中歧视性部分的夸大，例如狗的眼睛和鼻子
 ### 训练时特征演变
 在一个给定的特征图中投射回像素空间的强激活（跨越所有训练实例）的进展。外观上的突然跳动是由于最强激活的图像发生了变化。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625221733179.png)
+![](https://img-blog.csdnimg.cn/20210625221733179.png)
 上图表示通过训练随机选择的模型特征子集的演化。每个图层的特征显示在不同的块中。在每个块中，我们在 epoch [1,2,5,10,20,30,40,64] 中显示了随机选择的特征子集。可视化显示了给定特征图的最强激活（在所有训练示例中），使用我们的 deconvnet 方法投影到像素空间。人为增强色彩对比度。
 
 **上层只有在相当多的 epochs(40-50)之后才发展，需要让模型训练直到完全收敛。**
 
 ### 特征不变性
 样本图像，在观察模型顶层和底层的特征向量相对于未变换特征的变化时，它们被不同程度地平移、旋转和缩放。小的变换在模型的第一层有很大的影响，但在顶部特征层的影响较小。该网络的输出对平移和缩放是稳定的。一般来说，除了具有旋转对称性的物体，输出对旋转是不变的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625221819624.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625221819624.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 上图表示：模型内垂直平移、缩放和旋转不变性的分析（分别为 a-c 行）。第 1 列：5 个经过转换的示例图像。列2和3：分别来自第1层和第7层的原始图像和变换图像的特征向量之间的欧几里德距离。第4列：每个图像的真实标签的概率，因为图像被变换。
 
 ### 结构的选择

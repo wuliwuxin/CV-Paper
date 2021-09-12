@@ -53,6 +53,8 @@
 
 - [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
+![](/picture/Alexnet.png)
+
  2012年《ImageNet Classification with Deep Convolutional Neural Networks 》 ILSVRC-2012 大赛冠军，促进CNN的扛鼎之作，AlexNet是CNN发展史上的一个历史性转折，不能不读。
  
  [论文理解](/notes/AlexNet.md)
@@ -66,6 +68,8 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 [论文理解](/notes/ZFNet.md)
 
 - [VGGNet](https://arxiv.org/abs/1409.1556)
+
+![](/picture/VGG.png)
 
  《Very Deep Convolutional Networks for Large-Scale Image Recognition》,虽然不是那年ImageNet大赛的冠军(那年的冠军是GoogLeNet),但是VGGNet对后面的ResNet，Inception产生了重要的影响。
 

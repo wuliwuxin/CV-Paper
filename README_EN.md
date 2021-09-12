@@ -53,6 +53,8 @@ Continuously updated ......
 
 - [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
+![](/picture/Alexnet.png)
+
  2012 "ImageNet Classification with Deep Convolutional Neural Networks" ILSVRC-2012 contest winner, promoting the CNN's masterpiece, AlexNet is a historic turn in the history of CNN development, can not be unread.
 
  [Personal understanding](/notes/AlexNet.md)
@@ -67,6 +69,8 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 [Personal understanding](/notes/ZFNet.md)
 
 - [VGGNet](https://arxiv.org/abs/1409.1556)
+
+![](/picture/VGG.png)
 
 "Very Deep Convolutional Networks for Large-Scale Image Recognition", although not the winner of that year's ImageNet competition (the winner of that year was GoogLeNet), VGGNet had an important impact on the later ResNet and Inception.
  [Personal understanding](/notes/VGG.md)
