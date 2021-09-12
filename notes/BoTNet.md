@@ -22,6 +22,7 @@ BoTNet：一种简单却功能强大的backbone，该架构将自注意力纳入
 
 **创新点**
 ![](https://img-blog.csdnimg.cn/634e6ac76b5c4c5f95186b10e30b2753.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16)
+
 左边的是ResNet的bottleneck结构，右边的是引入multi-head self-attention的bottleneck，称作BoT。两者唯一的不同在3*3的卷积和MHSA，其它的没有任何区别。在Mask RCNN中的ResNet50加入BoT，并且其它超参不变的情况下，COCO实例分割的beachmark的mask AP提升了1.2%。
 
 论文就是修改经典网络ResNet，用Multi-Head Self-Attention替换ResNet Bottleneck中的3*3卷积，其他不进行修改。这一个简单的改变，就能使性能提升。
@@ -68,6 +69,7 @@ ResNet-34层网络结构
 **网络并不是越深越好。**
 
 ![](https://img-blog.csdnimg.cn/d84d53b3f3c7486d86b2b905b4dc1d69.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 **原因**:
 - 梯度消失或梯度爆炸
 - 退化问题
@@ -78,19 +80,20 @@ ResNet-34层网络结构
 ![](https://img-blog.csdnimg.cn/a7e4e58dfc774caf9acfe676674660d7.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 ## BotNet详解
 ![](https://img-blog.csdnimg.cn/ec2e95d0a7ad4ba4a49925a8dbfb92e1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 左边可以看作是传统的Transformer模型，中间就是本文主角BoTNet，右图就是一个BoT block。
 
 带有MHSA层的ResNet botlteneck可以被看作是具有bottleneck的Transformer块。，但有一些细微的差别，如剩余连接、归一化层的选择等等。
 
 **Transformer中的MHSA和BoTNet中的MHSA的区别：**
 
-1、 归一化，Transformer使用 Layer Normalization，而BoTNet使用 Batch Normalization。
+1. 归一化，Transformer使用 Layer Normalization，而BoTNet使用 Batch Normalization。
 
-2、非线性激活，Transformer仅仅使用一个非线性激活在FPN block模块中，BoTNet使用了3个非线性激活。
+2. 非线性激活，Transformer仅仅使用一个非线性激活在FPN block模块中，BoTNet使用了3个非线性激活。
 
-3、输出投影，Transformer中的MHSA包含一个输出投影，BoTNet则没有。
+3. 输出投影，Transformer中的MHSA包含一个输出投影，BoTNet则没有。
 
-4、优化器，Transformer使用Adam优化器训练，BoTNet使用sgd+ momentum
+4. 优化器，Transformer使用Adam优化器训练，BoTNet使用sgd+ momentum
 
 
 深度学习优化算法经历了 SGD -> SGDM -> NAG ->AdaGrad -> AdaDelta -> Adam -> Nadam 这样的发展历程。
@@ -102,23 +105,23 @@ ResNet-34层网络结构
 2.     切换算法以后用什么样的学习率？——Adam用的是自适应学习率，依赖的是二阶动量的累积，SGD接着训练的话，用什么样的学习率？
 
 优化算法的选择和使用方面的一些tricks
-1、首先，各大算法孰优孰劣并无定论。如果是刚入门，优先考虑 SGD+Nesterov Momentum或者Adam.（Standford 231n : The two recommended updates to use are either SGD+Nesterov Momentum or Adam）；
+1. 首先，各大算法孰优孰劣并无定论。如果是刚入门，优先考虑 SGD+Nesterov Momentum或者Adam.（Standford 231n : The two recommended updates to use are either SGD+Nesterov Momentum or Adam）；
 
-2、 **选择你熟悉的算法**——这样你可以更加熟练地利用你的经验进行调参。
+2. **选择你熟悉的算法**——这样你可以更加熟练地利用你的经验进行调参。
 
-3、 **充分了解你的数据**——如果模型是非常稀疏的，那么优先考虑自适应学习率的算法。
+3.  **充分了解你的数据**——如果模型是非常稀疏的，那么优先考虑自适应学习率的算法。
 
-4、**根据你的需求来选择**——在模型设计实验过程中，要快速验证新模型的效果，可以先用Adam进行快速实验优化；在模型上线或者结果发布前，可以用精调的SGD进行模型的极致优化。
+4. **根据你的需求来选择**——在模型设计实验过程中，要快速验证新模型的效果，可以先用Adam进行快速实验优化；在模型上线或者结果发布前，可以用精调的SGD进行模型的极致优化。
 
-5、先用小数据集进行实验。有论文研究指出，随机梯度下降算法的收敛速度和数据集的大小的关系不大。（The mathematics of stochastic gradient descent are amazingly independent of the training set size. In particular, the asymptotic SGD convergence rates are independent from the sample size. [2]）因此可以先用一个具有代表性的小数据集进行实验，测试一下最好的优化算法，并通过参数搜索来寻找最优的训练参数。
+5. 先用小数据集进行实验。有论文研究指出，随机梯度下降算法的收敛速度和数据集的大小的关系不大。（The mathematics of stochastic gradient descent are amazingly independent of the training set size. In particular, the asymptotic SGD convergence rates are independent from the sample size. [2]）因此可以先用一个具有代表性的小数据集进行实验，测试一下最好的优化算法，并通过参数搜索来寻找最优的训练参数。
 
-6、 **考虑不同算法的组合。**先用Adam进行快速下降，而后再换到SGD进行充分的调优。切换策略可以参考本文介绍的方法。
+6.  **考虑不同算法的组合**。先用Adam进行快速下降，而后再换到SGD进行充分的调优。切换策略可以参考本文介绍的方法。
 
-7、数据集一定要充分的打散（shuffle）。这样在使用自适应学习率算法的时候，可以避免某些特征集中出现，而导致的有时学习过度、有时学习不足，使得下降方向出现偏差的问题。
+7. 数据集一定要充分的打散（shuffle）。这样在使用自适应学习率算法的时候，可以避免某些特征集中出现，而导致的有时学习过度、有时学习不足，使得下降方向出现偏差的问题。
 
-8、训练过程中**持续监控训练数据和验证数据**上的目标函数值以及精度或者AUC等指标的变化情况。对训练数据的监控是要保证模型进行了充分的训练——下降方向正确，且学习率足够高；对验证数据的监控是为了避免出现过拟合。
+8. 训练过程中**持续监控训练数据和验证数据**上的目标函数值以及精度或者AUC等指标的变化情况。对训练数据的监控是要保证模型进行了充分的训练——下降方向正确，且学习率足够高；对验证数据的监控是为了避免出现过拟合。
 
-9、 **制定一个合适的学习率衰减策略**。可以使用定期衰减策略，比如每过多少个epoch就衰减一次；或者利用精度或者AUC等性能指标来监控，当测试集上的指标不变或者下跌时，就降低学习率。
+9.  **制定一个合适的学习率衰减策略**。可以使用定期衰减策略，比如每过多少个epoch就衰减一次；或者利用精度或者AUC等性能指标来监控，当测试集上的指标不变或者下跌时，就降低学习率。
 
 ![](https://img-blog.csdnimg.cn/d2f34af49e2f4a768cc7fb2ac609f77a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
@@ -130,6 +133,7 @@ ResNet-34层网络结构
 **BoTNet vs ResNet**
  
  设置训练策略：一个训练周期定义为12个epoch，以此类推。
+ 
 ![](https://img-blog.csdnimg.cn/90eeca7aa872431c9b99c5d9127c9966.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 **Multi-Scale Jitter对BoTNet的帮助更大**

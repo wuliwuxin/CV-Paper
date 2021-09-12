@@ -19,9 +19,10 @@ date: 2021-07-14 19:08:48
 ## 1 背景及部分作者
 
 **论文名称来源**
+
 ![ ](https://img-blog.csdnimg.cn/20210714185106589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 
-“**We Need To Go Deepe**r”是电影《盗梦空间》中的一个表达，它经常出现在使用电影屏幕截图的图像宏和垂直多窗格中，其中角色多姆·科布（莱昂纳多·迪卡普里奥饰）与罗伯特·菲舍尔（西里安·墨菲饰）谈论在某人的脑海中植入一个想法。
+“**We Need To Go Deepe**是电影《盗梦空间》中的一个表达，它经常出现在使用电影屏幕截图的图像宏和垂直多窗格中，其中角色多姆·科布（莱昂纳多·迪卡普里奥饰）与罗伯特·菲舍尔（西里安·墨菲饰）谈论在某人的脑海中植入一个想法。
 
 GoogLeNet是2014年Christian Szegedy等人在2014年大规模视觉挑战赛(ILSVRC2014)上使用的一种全新卷积神经网络结构，于2015年在CVPR发表了论文《Going Deeper with Convolutions》。在这之前的AlexNet、VGG等结构都是通过增大网络的深度（层数）来获得更好的训练效果，但层数的增加会带来很多负作用，比如overfitting、梯度消失、梯度爆炸等。Inception的提出则从另一种角度来提升训练结果：能更高效的利用计算资源，在相同的计算量下能提取到更多的特征，从而提升训练结果。
 
