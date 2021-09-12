@@ -324,7 +324,7 @@ If you like my experience, please consider sponsoring me so that I can continue 
       </tr>
   <tr>
     <td>
-      <img height="150" src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg"/>
+      <img src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg"/>
     </td>
     <td width="50%">
         <p align="left"> 

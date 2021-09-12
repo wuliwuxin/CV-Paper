@@ -325,7 +325,7 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
       </tr>
   <tr>
     <td>
-      <img height="150" src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg"/>
+      <img src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg"/>
     </td>
     <td width="50%">
         <p align="left"> 
