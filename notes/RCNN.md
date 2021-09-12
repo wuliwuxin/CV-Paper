@@ -9,8 +9,10 @@ date: 2021-09-01 08:33:47
 
 # 带你读论文系列之计算机视觉RCNN
 ![但是这样，我们总是习惯了不愿改变。](https://img-blog.csdnimg.cn/c6dbf5873193455aa98f2dd163d645f6.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 ## 前言
-RCNN系列的文章主要是**RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN,**这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。
+
+RCNN系列的文章主要是**RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Cascade RCNN**,这一系列的文章是目标检测two-stage算法的代表，这系列的算法精度高，效果好，是一类重要的方法。
  
 先来讲解目标检测开山之作R-CNN
  
@@ -21,6 +23,7 @@ RCNN系列的文章主要是**RCNN，Fast RCNN， Faster RCNN， Mask RCNN, Casc
 R-CNN作为第一个将RPN理念与CNN结合的论文，在后续不断改进，诞生了Faster-RCNN，Mask-RCNN等一系列经典模型，所以是一篇入门CV必读的经典论文。
 
 ##  01 寻找推荐区域
+
 在R-CNN中架构的第一步是要寻找推荐区域（Region Proposal），也就是找出可能的感兴趣区域（Region Of Interest, ROI）。获取推荐区域的方法有下三种，分为：滑动窗口、规则块和选择性搜索。
  
 第一种就是滑动窗口。滑动窗口本质上就是穷举法，利用不同的尺度和长宽比把所有可能的大大小小的块都穷举出来，然后送去识别，识别出来概率大的就留下来。很明显，这样的方法复杂度太高，产生了很多的冗余候选区域，在现实当中不可行。
@@ -30,6 +33,7 @@ R-CNN作为第一个将RPN理念与CNN结合的论文，在后续不断改进，
 第三种是**选择性搜索**。从机器学习的角度来说，前面的方法召回是不错了，但是精度差强人意，所以问题的核心在于如何有效地去除冗余候选区域。**其实冗余候选区域大多是发生了重叠，选择性搜索利用这一点，自底向上合并相邻的重叠区域，从而减少冗余。**
 
 ## 02 R-CNN结构
+
 R-CNN主要由**三部分**结构构成，分别为：
 
 **第一阶段**：Region Proposals提取阶段。主要使用的是之前就已经提出的技术：selective search，该技术我们不细讲，如感兴趣可在最后看一下该论文的具体实现细节。我们只要明白该阶段输入了图像，会返回大约2k个region proposals.
@@ -45,13 +49,17 @@ R-CNN主要由**三部分**结构构成，分别为：
 主要由于：正负样本类别不平衡，负样本的数量远大于正样本数量，训练过程中以128的batch_size为例，仅有32个正样本，96个负样本，而且负样本都是随机取样，而SVM有着比Softmax更好的利用困难样本的能力。
  
 **正样本**
+
 本类的真值标定框。
 
 **负样本**
+
 考察每一个候选框，如果和本类所有标定框的重叠都小于0.3，认定其为负样本。
 
 ## 03 R-CNN详情
+
 R-CNN的工作流程
+
 ![](https://img-blog.csdnimg.cn/77895e7adc1741c1871ff45f3c6ecbce.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 RCNN算法分为4个步骤
@@ -62,8 +70,11 @@ RCNN算法分为4个步骤
 - 使用回归器精细修正候选框位置；
 
 VOC 2007 训练的扭曲训练样本。
+
 ![](https://img-blog.csdnimg.cn/a811c0b95737445e8b0d9b23abcca283.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 ![](https://img-blog.csdnimg.cn/7e51eab8401043cda8f85fc06d22bd2f.webp)
+
 VOC 2010 测试的检测平均精度 (%)。R-CNN 与 UVA 和 Regionlets 最直接可比，因为所有方法都使用选择性搜索区域建议。边界框回归（BB）。在发布时，SegDPM 是 PASCAL VOC 排行榜上的最佳表现。DPM 和 SegDPM 使用其他方法未使用的上下文重新评分。
 
 ## 结果

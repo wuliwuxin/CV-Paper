@@ -9,7 +9,7 @@ categories: 计算机视觉
 
 # 带你读论文系列之计算机视觉--AlexNet
 **少一些功利主义，多一些不为什么的坚持，你将变得异常美丽**！加油，小可爱们！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622225925769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210622225925769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 
 ## 背景及作者
 **AlexNet**被认为是计算机视觉领域最有影响力的论文之一，它刺激了更多使用卷积神经网络和GPU来加速深度学习的论文的出现。截至2020年，AlexNet论文已被引用超过54,000次。
@@ -19,7 +19,9 @@ AlexNet参加了2012年9月30日举行的ImageNet大规模视觉识别挑战赛�
 **TOP5错误率**:即对一个图片，如果概率前五中包含正确答案，即认为正确。
 
 **Hinton**是对比散度算法的发明人之一，也是反向传播算法和深度学习的积极推动者，被誉为“深度学习之父”。Hinton因在深度学习方面的贡献与Yoshua Bengio和Yann LeCun一同被授予了2018年的图灵奖。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622230043357.png)
+
+![](https://img-blog.csdnimg.cn/20210622230043357.png)
+
 **深度学习三驾马车：**
 - 大规模数据；
 - 硬件算法；
@@ -31,6 +33,7 @@ AlexNet参加了2012年9月30日举行的ImageNet大规模视觉识别挑战赛�
 - GPUs等硬件以及高度优化的2-D卷积运算的实现发展成熟，以足够强大，可用于训练较大的CNNs，结合如今的大数据集，不用过分担心过拟合；
 
 ## 论文
+
 论文的模型，即AlexNet，其由多伦多大学，Geoff Hinton实验室设计，夺得了2012年ImageNet ILSVRC比赛的冠军，且其top-5错误率远低于第二名，分别为15.3%和26.2%。
 
 AlexNet在**深度学习发展史上的历史意义远大于其模型的影响。**在此之前，深度学习已经沉寂了很久。在此之后，深度学习重新迎来春天，卷积神经网络也成为计算机视觉的核心算法模型。
@@ -63,11 +66,13 @@ AlexNet在**深度学习发展史上的历史意义远大于其模型的影响�
 **举一个**🌰：训练集是平时作业题，验证集是模拟考试题，测试集是高考题，高考考砸说明过拟合了。
 
 ### 二、图像预处理：
+
 每个图片变成256*256的图片，计算出每一个像素的均值，把每一个像素都减去对应的均值（相当于中心化的预处理）。
 
 **预处理可以减少噪声的敏感性。**
 
 ### 三、激活函数
+
 **为什么使用ReLu激活函数？**
 
 **Sigmoid函数：**把（-∞,+∞）的任意数挤压在（0，1）小区间里；
@@ -81,11 +86,12 @@ sigmoid和tanh函数都是饱和激活函数，即当输入x过小或过大时�
 
 在此之前，有人提出f(x)=|tanh(x)|，此方法在Caltech-101数据集上正则化和局部平均池化特别好。但是，在Caltech-101数据集上，**主要问题是防止过度拟合。**而对在**大型数据集上，更快的学习、训练对性能有很大影响**，此方法不满足。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622230545680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210622230545680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 
 如图ReLU函数比tanh函数收敛快6倍。虽然不同网络结构效果可能不同，但ReLU普遍收敛很快。
 
 ### 四、GPU
+
 **为什么要使用多GPU？**
 
 单GPU无法训练太大的额数据集，因此使用两个并行GPU（当前GPU 能直接读取和写入彼此的内存）。
@@ -107,7 +113,8 @@ Alex认为LRN可以防止过拟合，并与生物上的神经元类似；但是�
 即池化步长小于池化窗口。
 **Alex认为可以防止过拟合，但后续也不会采用这个技巧，为以后的模型进行了探索。**
 
-### 七、整体结构![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622230737565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+
+### 七、整体结构![](https://img-blog.csdnimg.cn/20210622230737565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 224*224算出来第一层的feature map是一个小数，不符合整数的要求。则[(227-11)/4]+1=55，此处为作者的笔误。
 
 第一个卷积层：96个11*11*3的卷积核步长为4；
@@ -127,11 +134,11 @@ Alex认为LRN可以防止过拟合，并与生物上的神经元类似；但是�
 图像平移和水平翻转。将256*256的图像随机选取224*224的片段作为输入对象。一张图可以变成32*32*2=2048张图。虽然图像高度相似，但是可以有效的防止过拟合，扩充数据集。
 
 先对图像做镜像反射，就像下图这样：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622230835216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210622230835216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 摘自https://www.learnopencv.com/understanding-alexnet/
 
 然后在原图和镜像反射的图（256×256）中随机抽取227×227的块，像这样：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622230857825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210622230857825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 摘自https://www.learnopencv.com/understanding-alexnet/
 
 #### 2、Dropout随机丢弃一定比例的神经元，被丢弃的神经元不参加训练过程。
@@ -144,7 +151,7 @@ Dropout做法是，对每一层、每次训练以概率P丢弃一些神经元，
 **训练结束后的测试流程，要用完成的网络结构，同时对该层的所有的参数（w,b）都乘以（1-P）。**
 
 ### 九、 细节、结果与讨论
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210622231015379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210622231015379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 GPU1上的内核在很大程度上是不分颜色的，而GPU2上的内核在很大程度上是特定颜色的。这种特殊化发生在每次运行期间，并且与任何特定的随机权重初始化无关（除了GPU的重新编号之外）。
 
 第一卷积层对224×224×3的输入图像学习了96个大小为11×11×3的卷积核。上面的48个核是在GPU1上学习的，下面的48个核是在GPU2上学习的。

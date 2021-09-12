@@ -7,9 +7,9 @@ summary: AlexNet提出了一种可视化方法，展示了如何使用这些可�
 categories: 计算机视觉
 ---
 # 带你读论文系列之计算机视觉--FZNet
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625220117522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+
 ## 回顾
-[《带你读论文系列之计算机视觉--AlexNet》](https://blog.csdn.net/wuli_xin/article/details/118121084?spm=1001.2014.3001.5501)
+[《带你读论文系列之计算机视觉--AlexNet》](/notes/AlexNet.md)
 
 Convolutional Network表现好：
 - 更大的训练集的可用性，有数百万的标记样本；
@@ -19,12 +19,17 @@ Convolutional Network表现好：
 复杂模型的内部运作和行为，或它们如何取得如此好的性能，仍然没有什么深入了解。你如此优秀，我还不知道你为什么这么优秀。嗯，我必须要了解你一下。「🤔」
 
 ## 背景与作者
+
 **ZFNet**是**Matthew D.Zeiler与Rob Fergus**于2013年提出，并获得了**2013年ImageNet的冠军**。2012年AlexNet问世，并在ImageNet竞赛中取得了优异的成绩，也证明了大的卷积网路的性能优异，但是我们并不知道为什么CNN性能好。
 
 因此，该论文是在AlexNet基础上进行了一些细节的改动,通过使用可视化技术揭示了神经网络各层到底在干什么，起到了什么作用。也是基于这个技术，作者对AlexNet进行了优化，**调整之后的网络的性能在很多问题上性能都好于AlexNet。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625220749108.png)
+
+![](https://img-blog.csdnimg.cn/20210625220749108.png)
+
 **Matthew D.Zeiler**创始人兼 CEO Matthew Zeiler 是机器学习博士。应用人工智能 (AI) 领域的先驱和思想领袖。Matt 与著名机器学习专家 Geoff Hinton 和 Yann LeCun 在计算机视觉方面的开创性研究推动了图像识别行业从理论到实际应用。自 2013 年创立 Clarifai 以来，Matt 已将他屡获殊荣的研究发展为开发人员友好的产品，使企业能够快速无缝地将 AI 集成到他们的工作流程和客户体验中。今天，Clarifai 是领先的独立 AI 公司，“被广泛视为机器学习领域最有前途的 [初创公司] 之一。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625220815254.png)
+
+![](https://img-blog.csdnimg.cn/20210625220815254.png)
+
 **Rob Fergus**的研究领域是计算机视觉、机器学习和计算机图形。他对建立图像的统计模型感兴趣，这些模型既包括高层次的物体和场景，也包括低层次的像素和边缘。这些模型可以在各种问题中部署。他特别感兴趣的问题包括：物体识别、图像搜索等。
 
 ## 论文
@@ -38,7 +43,7 @@ Convolutional Network表现好：
 
 ### 技术：
 1、**反池化过程**：池化是不可逆的过程，然而我们可以通过记录池化过程中，最大激活值得坐标位置。然后在反池化的时候，只把池化过程中最大激活值所在的位置坐标的值激活，其它的值置为0。这个过程只是一种近似，因为我们在池化的过程中，除了最大值所在的位置，其它的值也是不为0的。
-2、**反激活**：在Alexnet中，relu函数是用于保证每层输出的激活值都是正数，因此对于反向过程，我们同样需要保证每层的特征图为正值，也就是说这个反激活过程和激活过程没有什么差别，都是直接采用relu函数。
+2、**反激活**：在AlexNet中，relu函数是用于保证每层输出的激活值都是正数，因此对于反向过程，我们同样需要保证每层的特征图为正值，也就是说这个反激活过程和激活过程没有什么差别，都是直接采用relu函数。
 3、**反卷积**：利用相同卷积核的转置作为核，于输入做卷积运算
 
 ### 特征可视化
@@ -70,7 +75,7 @@ Convolutional Network表现好：
 **最大池化不可逆**，但我们可以在变量中记录每个池化区域内最大值的位置来近似逆转。反池化：在卷积神经网络时，记录每个最大池化局部最大的位置。反池化时，将最大位置值还原，其余位置设为0。
 
 为了确保特征图始终是正的，我们通过ReLu非线性函数重建信号。单个激活获得的重建类似于原始输入图像的一小部分。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625221457777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625221457777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 
 
 ### 训练细节
@@ -132,13 +137,15 @@ Convolutional Network表现好：
 对于**图像分类**方法，**存在的问题**是模型是真正识别图像中对象的位置，还是仅使用周围的上下文。
 
 通过系统地用灰色方块遮挡输入图像的不同部分，并监测分类器的输出。因为当对象被遮挡时，正确类别的概率显着下降。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625221941959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625221941959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 如图所示三个测试示例，我们系统地用灰色方块（第 1 列）覆盖场景的不同部分，并查看顶部（第 5 层）特征映射（第二列和第三列）和分类器输出（第四列和第五列) 变化。第二列：对于灰度的每个位置，我们在第 5 层特征图（未遮挡图像中响应最强的那个）中记录总激活。第三列：投影到输入图像（黑色方块）中的该特征图的可视化，以及来自其他图像的该地图的可视化。第一行的例子显示了最强的特征是狗的脸。当这被掩盖时，特征图中的活动减少（第二列中的蓝色区域）。第四列：作为灰色方块位置的函数的正确类别概率图。例如。当狗的脸被遮挡时，“博美犬”的概率显着下降。第五列：最可能的标签作为遮挡器位置的函数。例如。在第一行，对于大多数位置，它是“博美犬”，但如果狗的脸被遮挡而不是球，那么它预测“网球”。在第二个示例中，汽车上的文本是第 5 层中最强的特征，但分类器对车轮最敏感。第三个示例包含多个对象。第 5 层中最强的特征挑出人脸，但分类器对狗敏感（第四列中的蓝色区域），因为它使用了多个特征图。
 
 当遮挡物覆盖出现在可视化中的图像区域时，我们看到特征图中的活动急剧下降。**这表明可视化真正对应于对象的位置和该特征图的图像结构。**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222041365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222047265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222041365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+
+![
+](https://img-blog.csdnimg.cn/20210625222047265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 如图所示：不同狗图像中不同对象部分的对应性度量。眼睛和鼻子的较低分数（与随机对象部分相比）表明该模型在模型的第 5 层隐式建立了某种形式的部分对应关系。在第 7 层，分数更相似，可能是由于上层试图区分不同品种的狗。
 
 ### 实验
@@ -146,7 +153,7 @@ Convolutional Network表现好：
 **ImageNet数据集**：训练集1.3M；验证集50K;测试集100K；1000个分类.
 
 #### 网络架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222128677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222128677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 224 x 224（具有 3 个颜色平面）图像作为输入呈现。第一层96 个过滤器（红色）卷积的，每个过滤器的大小为 7 x 7，在 x 和 y 中使用 2 的步长。然后得到的特征图是：（i）通过一个修正的线性函数；(ii) 池化（最大在 3x3 区域内，使用步幅 2）；（iii）跨特征映射归一化的对比度，以提供 96 个不同的 55 x 55 元素特征映射。
 
 在第 2、3、4、5 层重复类似的操作。最后两层是全连接的，将顶部卷积层的特征作为向量形式（6·6·256 = 9216 维）的输入。最后一层是一个C-way softmax function，C是类的数量。所有过滤器和特征图都是方形的。
@@ -160,7 +167,7 @@ Convolutional Network表现好：
 - 去除中间卷积层和全连接层后，只有4个层的模型的性能明显下降，说明了模型的整体深度很重要。
 - 单独改变全连接层的尺寸，对分类结果影响不大，但增大中间卷积层的尺寸对分类结果。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222219818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222219818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 使用ImageNet预训练的模型用到其他数据集上也取得了很好的效果，说明了fine-tuning的价值。
 
 特征分析部分在原始模型某一中间层后加SoftMax或者SVM分类器，说明了最后面层特征的分类效果最好，再次佐证了不同层之间学习到的特征具有层次结构，层数越大，学习到的特征表达能力越强。
@@ -168,10 +175,11 @@ Convolutional Network表现好：
 **其他数据集上的表现**
 
 对于 Caltech-101 和 Caltech-256，数据集非常相似，以至于我们模型得到结果做好。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222515559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222523409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222515559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222523409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
 但我们的 convnet 模型对 PASCAL 数据的泛化不太好，可能存在数据集偏差。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625222600421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210625222600421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1bGlfeGlu,size_16,color_FFFFFF,t_70)
+
 ### 总结
 - 提出了一种可视化方法，展示了如何使用这些可视化来调试模型的问题以获得更好的结果。
 - 发现学习到的特征远不是无法解释的，而是特征间存在层次性，层数越深，特征不变性越强，类别的判别能力越强；

@@ -27,11 +27,12 @@ BoTNet：一种简单却功能强大的backbone，该架构将自注意力纳入
 论文就是修改经典网络ResNet，用Multi-Head Self-Attention替换ResNet Bottleneck中的3*3卷积，其他不进行修改。这一个简单的改变，就能使性能提升。
 
 ![](https://img-blog.csdnimg.cn/ad0c9ed228934134947a09d8d29c7a89.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 BoTNet是一个混合模型（CNN + Transformer）。近期华为诺亚也使用这种混合模型提出了CMT。
 
-**[CMT: Convolutional Neural Networks Meet Vision Transformers](https://arxiv.org/abs/2107.06263)**
+ **[CMT: Convolutional Neural Networks Meet Vision Transformers](https://arxiv.org/abs/2107.06263)**
 
-**[代码](https://github.com/FlyEgle/CMT-pytorch)**
+ **[代码](https://github.com/FlyEgle/CMT-pytorch)**
 
 ![](https://img-blog.csdnimg.cn/cdecd99e5d624bb888103a009188f4fe.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
@@ -40,7 +41,8 @@ DeiT直接将输入图像拆分为非重叠图像块，图像块的结构信息�
 类似经典CNN(如ResNet)架构设计，所提CMT包含四个阶段以生成多尺度特征(这对于稠密预测任务非常重要)。为生成分层表达，在每个阶段开始之前采用卷积降低特征分辨率并提升通道维度。在每个阶段，堆叠多个CMT模块进行特征变换同时保持特征分辨率不变，每个CMT模块可以同时捕获局部与长距离依赖关系。在模型的尾部，我们采用GAP+FC方式进行分类。
 
 ![](https://img-blog.csdnimg.cn/a984143d8cae4cfcb976bc59a4032364.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
-上表给出了所提方法与其他CNN、Transformer的性能对比，从中可以看到：
+ 
+ 上表给出了所提方法与其他CNN、Transformer的性能对比，从中可以看到：
 - 所提CMT取得了更佳的精度，同时具有更少的参数量、更少的计算复杂度；
 - 所提CMT-S凭借4.0B FLOPs取得了83.5%的top1精度，这比DeiT-S高3.7%，比CPVT高2.0%；
 - 所提CMT-S比EfficientNet-B4指标高0.6%，同时具有更低的计算复杂度。
@@ -51,9 +53,11 @@ DeiT直接将输入图像拆分为非重叠图像块，图像块的结构信息�
 ResNet在2015年由微软实验室提出，斩获当年ImageNet竞赛中分类任务第一名，目标检测第一名。获得COCO数据集中目标检测第一名，图像分割第一名。
 
 ![](https://img-blog.csdnimg.cn/44b5f279224447988f789dcbf4090f5c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 注意：主分支与shortcut的输出特征矩阵shape必须相同。
 
 ResNet-34层网络结构
+
 ![](https://img-blog.csdnimg.cn/35484e7bcd9b471fb451b07c94b1f9ea.png)
 
 **网络中的亮点：**
@@ -117,30 +121,41 @@ ResNet-34层网络结构
 9、 **制定一个合适的学习率衰减策略**。可以使用定期衰减策略，比如每过多少个epoch就衰减一次；或者利用精度或者AUC等性能指标来监控，当测试集上的指标不变或者下跌时，就降低学习率。
 
 ![](https://img-blog.csdnimg.cn/d2f34af49e2f4a768cc7fb2ac609f77a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
-上图是ResNet-50和BoTNet-50的区别，唯一的不同在c5。而且BoTNe-50t的参数量只有ResNet-50的0.82倍，但是steptime略有增加。
+
+ 上图是ResNet-50和BoTNet-50的区别，唯一的不同在c5。而且BoTNe-50t的参数量只有ResNet-50的0.82倍，但是steptime略有增加。
 
 只将ResNet的c5 block中的残差结构替换为MHSA结构。
 
 ## 实验结果
 **BoTNet vs ResNet**
-设置训练策略：一个训练周期定义为12个epoch，以此类推。
+ 
+ 设置训练策略：一个训练周期定义为12个epoch，以此类推。
 ![](https://img-blog.csdnimg.cn/90eeca7aa872431c9b99c5d9127c9966.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
-**Multi-Scale Jitter对BoTNet的帮助更大**
-![](https://img-blog.csdnimg.cn/480f586b804e41dfa6237964bceddd95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16)
-![](https://img-blog.csdnimg.cn/f7ae675bdfd044aeb6846612b7e8fd39.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16)
-就是对分辨率的一个多尺度变化。从上图可以得出图像分辨率越大，它提升的性能越高。
 
-加入 **relative position encodings** ，还能进一步提升性能！
+**Multi-Scale Jitter对BoTNet的帮助更大**
+
+![](https://img-blog.csdnimg.cn/480f586b804e41dfa6237964bceddd95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16)
+
+![](https://img-blog.csdnimg.cn/f7ae675bdfd044aeb6846612b7e8fd39.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16)
+
+ 就是对分辨率的一个多尺度变化。从上图可以得出图像分辨率越大，它提升的性能越高。
+
+ 加入 **relative position encodings** ，还能进一步提升性能！
 
 ![](https://img-blog.csdnimg.cn/f4436d374c9b424bab0e5dd136271df9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
-第一行是R50什么夜不加，原始的ResNet；第二行只加了自注意力机制，提升了0.6；第三行只加了相对位置编码。相对位置编码比自注意力机制提神的性能要高一点。第四行，加入了自注意力机制和相对位置编码，性能提升了1.5；第五行加入了自注意力机制和绝对位置编码只提高了0.4。
+
+ 第一行是R50什么夜不加，原始的ResNet；第二行只加了自注意力机制，提升了0.6；第三行只加了相对位置编码。相对位置编码比自注意力机制提神的性能要高一点。第四行，加入了自注意力机制和相对位置编码，性能提升了1.5；第五行加入了自注意力机制和绝对位置编码只提高了0.4。
 
 ![](https://img-blog.csdnimg.cn/61ef9541a8044e998106497f49997ea5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
-这个图是几个网络性能的对比图。BoTNet是红色线，SENet是黑色线，EfficientNet是蓝色线。T3和T4的性能比SENet差一点，而在T5的时候两者性能差不多。这可以得出纯卷积模型在准确率上可达到83%。T7准确率达到84.7%，与EfficientNet B7的精度相当，效率提升了1.64倍，BoTNet的性能优于DeiT-384。
 
-BoTNet要替换ResNet中的3*3的卷积部分代码
+ 这个图是几个网络性能的对比图。BoTNet是红色线，SENet是黑色线，EfficientNet是蓝色线。T3和T4的性能比SENet差一点，而在T5的时候两者性能差不多。这可以得出纯卷积模型在准确率上可达到83%。T7准确率达到84.7%，与EfficientNet B7的精度相当，效率提升了1.64倍，BoTNet的性能优于DeiT-384。
+
+
+ BoTNet要替换ResNet中的3*3的卷积部分代码
 ![](https://img-blog.csdnimg.cn/63f6cf2978fa46389cacbb890bb10d12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 MHSA的部分代码
+
 ![](https://img-blog.csdnimg.cn/4f81acb7ce114027a72bc3c241dde3f7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ![](https://img-blog.csdnimg.cn/3d4e198e055947af83db71e7a034fa65.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
@@ -159,18 +174,23 @@ MHSA的部分代码
 
 ![](https://img-blog.csdnimg.cn/49075572a99f4797bae2154403c45eba.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 ![](https://img-blog.csdnimg.cn/a8f6b63626a14af2b095a066900b9b2f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 京东AI研究院梅涛团队在自注意力机制方面的探索，不同于现有注意力机制仅采用局部或者全局方式进行上下文信息获取，他们创造性的将Transformer中的自注意力机制的动态上下文信息聚合与卷积的静态上下文信息聚合进行了集成，提出了一种新颖的Transformer风格的“即插即用”CoT模块，它可以直接替换现有ResNet架构Bottleneck中的卷积并取得显著的性能提升。无论是ImageNet分类，还是COCO检测与分割，所提CoTNet架构均取得了显著性能提升且参数量与FLOPs保持同水平。比如，相比EfficientNet-B6的84.3%，所提SE-CoTNetD-152取得了84.6%同时具有快2.75倍的推理速度。
 
 
 ![](https://img-blog.csdnimg.cn/25a8c9d360f541b4833fa6fe7a3b071f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 用"CoT模块"，它可以直接替换现有ResNet架构Bottleneck中的卷积并取得显著的性能提升。无论是ImageNet分类，还是COCO检测与分割，所提CoTNet架构均取得了显著性能提升且参数量与FLOPs保持同水平。比如，相比EfficientNet-B6的84.3%，所提SE-CoTNetD-152取得了84.6%同时具有快2.75倍的推理速度。
+
 ![](https://img-blog.csdnimg.cn/c2d3e0eafe124393a7b5c8a8071f9e71.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ![](https://img-blog.csdnimg.cn/a2c8f5a5657445e0a51cbb83727ade7a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
 具体来说，CoTNet-50直接采用CoT替换Bottlenck中的卷积；类似的，CoTNeXt-50采用CoT模块替换对应的组卷积，为获得相似计算量，对通道数、分组数进行了调整：CoTNeXt-50的参数量是ResNeXt-50的1.2倍，FLOPs则是1.01倍。
  
 **可以看到**：
 - 所提CoTNet、CoTNeXt均具有比其他ResNet改进版更优的性能；
 - 相比ResNeSt-50，ResNeSt-101，所提CoTNeXt-50与CoTNeXt-101分别取得了1.0%与0.9%的性能提升；
 - 相比BoTNet，所提CoTNet同样具有更优的性能；甚至于，SE-CoTNetD-152(320)取得了比BoTNet-S1-128(320)、EfficientNet-B7更优的性能。
+
 ![](https://img-blog.csdnimg.cn/126dee476ce94102b65710a98310a4df.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
