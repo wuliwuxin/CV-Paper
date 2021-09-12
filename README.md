@@ -318,4 +318,4 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 
 |支付宝|微信|
 |---|---|
-|![](/picture/AliPlay.jpg)|![](/picture/wechatPlay.jpg)|
+|![](/picture/AliPay.jpg)|![](/picture/wechatPay.jpg)|
