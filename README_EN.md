@@ -316,6 +316,20 @@ If you find it helpful, please share it with your friends who need to learn.
 If you like my experience, please consider sponsoring me so that I can continue to share better content with you.
 
 
-|AliPay|WeChat|
-|---|---|
-|![](/picture/AliPay.jpg)|![](/picture/wechatPay.jpg)|
+<table width="100%" border="0" cellspacing="15" cellpadding="0">
+<tbody>
+    <tr>
+          <th>Alipay</th>
+          <th>WeChat</th>
+      </tr>
+  <tr>
+    <td>
+      <img height="150" src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg"/>
+    </td>
+    <td width="50%">
+        <p align="left"> 
+        <p align="left"> <img src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/wechatPay.jpg" /> </p>
+    </td>
+   </tr>
+</tbody>
+</table>
