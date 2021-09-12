@@ -9,7 +9,7 @@ Continuously updated ......
 ### Required Content -- Books
 1. [Machine Learning](./book)" by Mr. Zhou Zhihua, "Watermelon Book". Formula derivation companion using ["Pumpkin Book"](https://datawhalechina.github.io/pumpkin-book/#/)
 
-2. ["《"Statistical learning methods"](./book)--Mr. Li Hang.
+2. ["Statistical learning methods"](./book)--Mr. Li Hang.
 
 3. " Flower book "[-deep learning](./book)--The 2018 Turing Award dive into the AI bible.
 
