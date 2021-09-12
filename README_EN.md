@@ -318,4 +318,4 @@ If you like my experience, please consider sponsoring me so that I can continue 
 
 |AliPay|WeChat|
 |---|---|
-|![](/picture/AliPlay.jpg)|![](/picture/wechatPlay.jpg)|
+|![](/picture/AliPay.jpg)|![](/picture/wechatPay.jpg)|
