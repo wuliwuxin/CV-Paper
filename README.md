@@ -316,6 +316,21 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 如果你看好我的经验分享, 也请考虑适当的赞助打赏, 让我能继续分享更好的内容给大家。
 
 
-|支付宝|微信|
-|---|---|
-|![](/picture/AliPay.jpg)|![](/picture/wechatPay.jpg)|
+
+<table width="100%" border="0" cellspacing="15" cellpadding="0">
+<tbody>
+    <tr>
+          <th>支付宝</th>
+          <th>微信</th>
+      </tr>
+  <tr>
+    <td>
+      <img height="150" src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/AliPay.jpg />
+    </td>
+    <td width="50%">
+        <p align="left"> 
+        <p align="left"> <img src="https://github.com/wuliwuxin/CV-Paper/blob/main/picture/wechatPay.jpg" /> </p>
+    </td>
+   </tr>
+</tbody>
+</table>
