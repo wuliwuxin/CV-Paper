@@ -55,15 +55,13 @@
  
  [论文理解](/notes/AlexNet.md)
 
-- [FZNet](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf)
+- [ZFNet](https://arxiv.org/abs/1311.2901)
 
 AlexNet复杂模型的内部运作和行为，或它们如何取得如此好的性能，仍然没有什么深入了解。你如此优秀，我还不知道你为什么这么优秀。嗯，我必须要了解你一下。「🤔」
 
- [论文理解](/notes/FZNet.md)
-
-- [ZFNet](https://arxiv.org/abs/1311.2901)
-
 ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 的冠军。
+
+[论文理解](/notes/ZFNet.md)
 
 - [VGGNet](https://arxiv.org/abs/1409.1556)
 

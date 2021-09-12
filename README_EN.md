@@ -55,15 +55,14 @@ Continuously updated ......
 
  [Personal understanding](/notes/AlexNet.md)
 
-- [FZNet](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf)
-
- There is still little insight into the inner workings and behavior of AlexNet's complex models, or how they achieve such good performance. You are so good, and I still don't know why you are so good. Well, I have to get to know you a little bit.「🤔」
- 
- [Personal understanding](/notes/FZNet.md)
-
 - [ZFNet](https://arxiv.org/abs/1311.2901)
 
 
+There is still little insight into the inner workings and behavior of AlexNet's complex models, or how they achieve such good performance. You are so good, and I still don't know why you are so good. Well, I have to get to know you a little bit.「🤔」
+
+ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
+
+[Personal understanding](/notes/ZFNet.md)
 
 - [VGGNet](https://arxiv.org/abs/1409.1556)
 
