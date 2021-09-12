@@ -53,7 +53,7 @@
 
 - [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
-![](/picture/Alexnet.png)
+![](/picture/AlexNet.png)
 
  2012年《ImageNet Classification with Deep Convolutional Neural Networks 》 ILSVRC-2012 大赛冠军，促进CNN的扛鼎之作，AlexNet是CNN发展史上的一个历史性转折，不能不读。
  
@@ -79,7 +79,7 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 
  GoogleNet（Inception V1）和Inception V3:《Going Deeper with Convolutions》,《Rethinking the Inception Architecture for Computer Vision》,2014年ImageNet大赛冠军,Inception结构的设计很巧妙  。
  
-  [GoogleNet论文理解](/notes/GoogleNet.md)
+  [GoogleNet 论文理解](/notes/GoogLeNet.md)
   
   [Inception V2论文理解](/notes/Inception-v2-BN-Inception.md)
   
