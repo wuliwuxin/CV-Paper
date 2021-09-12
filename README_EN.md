@@ -80,7 +80,9 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 
  GoogleNet（Inception V1）, Inception V3:《Going Deeper with Convolutions》,《Rethinking the Inception Architecture for Computer Vision》,Winner of ImageNet 2014, the Inception structure is cleverly designed .
  
-  [Personal understanding](/notes/GoogleNet.md)
+  [GoogleNet Personal understanding](/notes/GoogleNet.md)
+  
+  [Inception V2 Personal understanding](/notes/Inception-v2-BN-Inception.md)
  
 - [ResNet](https://arxiv.org/abs/1512.03385)
 

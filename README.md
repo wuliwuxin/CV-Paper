@@ -79,8 +79,12 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 
  GoogleNet（Inception V1）和Inception V3:《Going Deeper with Convolutions》,《Rethinking the Inception Architecture for Computer Vision》,2014年ImageNet大赛冠军,Inception结构的设计很巧妙  。
  
-  [论文理解](/notes/GoogleNet.md)
- 
+  [GoogleNet论文理解](/notes/GoogleNet.md)
+  
+  [Inception V2论文理解](/notes/Inception-v2-BN-Inception.md)
+  
+  [Inception V3论文理解]()
+  
 - [ResNet](https://arxiv.org/abs/1512.03385)
 
  《Deep Residual Learning for Image Recognition》，直接将top5错误率降到了3.57%（GoogLeNet 是6.66%），超越了人眼，文中最大的亮点就是残差块结构的设计。
