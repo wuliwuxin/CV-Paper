@@ -19,8 +19,8 @@ date: 2021-09-13 23:57:14
 **重新思考计算机视觉中的Inception结构**。
 
 **回顾**
-1. [GoogLeNet-V1](https://wuliwuxin.github.io/2021/07/14/googlenet/)主要采用了多尺度卷积核、1x1卷积操作、辅助损失函数；
-2. [GoogLeNet-V2](https://wuliwuxin.github.io/2021/09/12/inception-v2-bn-inception/)在V1的基础上加了BN层，使用小卷积核堆叠替换大卷积核；
+1. [GoogLeNet-V1](/notes/GoogLeNet.md)主要采用了多尺度卷积核、1x1卷积操作、辅助损失函数；
+2. [GoogLeNet-V2](/notes/Inception-v2-BN-Inception.md)在V1的基础上加了BN层，使用小卷积核堆叠替换大卷积核；
 
 GoogLeNet –V1 采用多尺度卷积核，1✖️1卷积操作，辅助损失函数，实现更深的22层卷积神经网络，夺得ILSVRC-2014 分类和检测冠军，定位亚军。
 
@@ -46,7 +46,7 @@ GoogLeNet比VGG 计算量小；GoogLeNet可用于有限资源下的场景。
 
 GoogLeNet的Inception 架构也被设计为即使在内存和计算预算的严格限制下也能表现良好。例如，GoogLeNet仅使用了500 万个参数，相对于其前身AlexNet使用了6000万个参数，这意味着减少了12 倍。此外，**VGGNet使用的参数比AlexNet多3倍**。
 
-**摘要：**
+**摘要**：
 1. 背景：自2014年以来，深度卷积神经网络成为主流，在多个任务中获得优异成绩；
 2. 问题：目前精度高的卷积神经网络，参数多，计算量大，存在落地困难问题；
 3. 解决：本文提出分解卷积及正则化策略，提升深度卷积神经网络速度和精度；

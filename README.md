@@ -83,7 +83,7 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
   
   [Inception V2论文理解](/notes/Inception-v2-BN-Inception.md)
   
-  [Inception V3论文理解](/notes/GoogLeNet-V3.md))
+  [Inception V3论文理解](/notes/GoogLeNet-V3.md)
   
 - [ResNet](https://arxiv.org/abs/1512.03385)
 

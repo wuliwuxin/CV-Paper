@@ -83,6 +83,7 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
   [GoogleNet Personal understanding](/notes/GoogLeNet.md)
   
   [Inception V2 Personal understanding](/notes/Inception-v2-BN-Inception.md)
+  
   [Inception V3](/notes/GoogLeNet-V3.md)
  
 - [ResNet](https://arxiv.org/abs/1512.03385)
