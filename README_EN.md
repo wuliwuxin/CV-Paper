@@ -90,7 +90,7 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 
  "Deep Residual Learning for Image Recognition", which directly reduces the top5 error rate to 3.57% (GoogLeNet is 6.66%), surpassing the human eye, and the biggest highlight in the paper is the design of the residual block structure.
  
-  [Personal understanding(/notes/ResNet和ResNeXt.md)
+  [Personal understanding](/notes/ResNet和ResNeXt.md)
  
 - [ResNeXt](https://arxiv.org/abs/1611.05431)
 
