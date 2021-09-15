@@ -1,9 +1,9 @@
 ---
 title: Inception-V4
-categories: 分类
+categories: 计算机视觉
 tags:
-  - 标签
-description: 描述
+  - 论文
+description: CNN很强，例如我们的Inception；最近的resnet也很强。那强强联手会怎么样呢？
 date: 2021-09-15 17:08:30
 ---
 # 带你读论文系列之计算机视觉--Inception V4
@@ -41,11 +41,11 @@ date: 2021-09-15 17:08:30
 
 **因此Inception获得残差方法的所有好处，同时保持其计算效率。**
 
-[带你读论文系列之计算机视觉--GoogLeNet](/notes/GoogLeNet)
+[带你读论文系列之计算机视觉--GoogLeNet](/notes/GoogLeNet.md)
 
 [带你读论文系列之计算机视觉--Inception v2/BN-Inception](/notes/Inception-v2-BN-Inception.md)
 
-[带你读论文系列之计算机视觉--GoogLeNet V3](/notes/GoogLeNet-V3)
+[带你读论文系列之计算机视觉--GoogLeNet V3](/notes/GoogLeNet-V3.md)
 
 模型的参数和计算复杂性束缚了Inception V3 的性能。而Inception V4它具有比Inception V3更统一的简化架构和更多的Inception模块。
 

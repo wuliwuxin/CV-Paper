@@ -85,6 +85,7 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
   
   [Inception V3论文理解](/notes/GoogLeNet-V3.md)
   
+  
 - [ResNet](https://arxiv.org/abs/1512.03385)
 
  《Deep Residual Learning for Image Recognition》，直接将top5错误率降到了3.57%（GoogLeNet 是6.66%），超越了人眼，文中最大的亮点就是残差块结构的设计。
@@ -99,7 +100,8 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 * [Inception-v4, Inception ResNet](https://arxiv.org/abs/1602.07261)
     *  [Inception-v4代码实现](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v4.py)
     *  [Inception-Resnet-V2代码实](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_resnet_v2.py)
-
+   
+   [Inception V4论文理解](/notes/Inception-V4.md)
 
 - [MobileNet v1](https://arxiv.org/abs/1704.04861)
 

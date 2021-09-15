@@ -100,7 +100,8 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 * [Inception-v4, Inception ResNet](https://arxiv.org/abs/1602.07261)
     *  [Inception-v4 Code](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v4.py)
     *  [Inception-Resnet-V2 Code](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_resnet_v2.py)
-
+   
+   [Inception V4 Personal understanding](/notes/Inception-V4.md)
 
 - [MobileNet v1](https://arxiv.org/abs/1704.04861)
 
