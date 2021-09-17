@@ -99,7 +99,7 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 
 * [Inception-v4, Inception ResNet](https://arxiv.org/abs/1602.07261)
     *  [Inception-v4代码实现](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v4.py)
-    *  [Inception-Resnet-V2代码实](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_resnet_v2.py)
+    *  [Inception-Resnet-V2代码实现](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_resnet_v2.py)
    
    [Inception V4论文理解](/notes/Inception-V4.md)
 
