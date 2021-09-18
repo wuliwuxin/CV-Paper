@@ -119,7 +119,7 @@ CIFAR-10上各层响应的标准偏差（std）。响应是每个3×3层的输�
 
 ![](https://img-blog.csdnimg.cn/37c15956a9374959835e544f7b7f9901.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_19,color_FFFFFF,t_70,g_se,x_16)
 
-总结
+## 总结
 
 1. 当堆积层的输入x和输出y不同维度的时候，即f是一个从低维向高维的映射时，这个时候不能简单的添加恒等映射作为shortcut connection，需要加上一个线性投影Ws，等于一个连接矩阵，这种结构称为投影结构。
 

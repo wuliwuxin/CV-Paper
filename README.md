@@ -88,14 +88,26 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
   
 - [ResNet](https://arxiv.org/abs/1512.03385)
 
+
+![](https://img-blog.csdnimg.cn/dbce2b4dec894d908b846b39ad40e489.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_12,color_FFFFFF,t_70,g_se,x_16)
+
  《Deep Residual Learning for Image Recognition》，直接将top5错误率降到了3.57%（GoogLeNet 是6.66%），超越了人眼，文中最大的亮点就是残差块结构的设计。
  
   [论文理解](/notes/ResNet和ResNeXt.md)
  
 - [ResNeXt](https://arxiv.org/abs/1611.05431)
 
+
+![](https://img-blog.csdnimg.cn/28de62c801bc4839aa72f2474b507507.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_20,color_FFFFFF,t_70,g_se,x_16)
+
  [论文理解](/notes/ResNet和ResNeXt.md)
 
+
+- [DenseNet](https://arxiv.org/abs/1608.06993)
+
+![](https://img-blog.csdnimg.cn/189e3d35498f409d8f4c4e5e94557bca.webp?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6L-b6Zi25aqb5bCP5ZC0,size_15,color_FFFFFF,t_70,g_se,x_16)
+
+[论文理解](/notes/DenseNet.md)
 
 * [Inception-v4, Inception ResNet](https://arxiv.org/abs/1602.07261)
     *  [Inception-v4代码实现](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v4.py)
