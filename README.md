@@ -144,6 +144,8 @@ Google 团队提出 MnasNet,使用强化学习的思路，提出一种资源约�
 
 一个可嫁接/整合的Block 😇。让我们的神经网络使用全局信息来增强有用的信息，同时抑制无用的。
 
+![](/picture/SENet.ong)
+
 [论文理解](/notes/SENet.md)
 
 

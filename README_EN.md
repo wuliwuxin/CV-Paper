@@ -141,6 +141,8 @@ The Google team proposed MnasNet, an automatic neural structure search method fo
 
 A graftable / integrated block 😇.  Let our neural network use global information to enhance useful information and suppress useless information.
 
+![](/picture/SENet.ong)
+
 [Personal uderstanding](/notes/SENet.md)
 
 
