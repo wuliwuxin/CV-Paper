@@ -127,6 +127,9 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 
 - [ShuffleNet v2](https://arxiv.org/abs/1807.11164v1)
 
+- [MnasNet](http://arxiv.org/pdf/1807.11626.pdf)
+
+The Google team proposed MnasNet, an automatic neural structure search method for resource-constrained terminal CNN models using the idea of reinforcement learning.
 
 - [EfficientNet_v1](https://arxiv.org/abs/1905.11946v3)
 
@@ -136,6 +139,9 @@ ZFNet, which is a visualization of AlexNet, was the winner of the ILSVRC2014.
 
 - [SENet](https://arxiv.org/abs/1709.01507)
 
+A graftable / integrated block 😇.  Let our neural network use global information to enhance useful information and suppress useless information.
+
+[Personal uderstanding](/notes/SENet.md)
 
 
 ## Object-detection

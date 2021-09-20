@@ -130,6 +130,10 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 - [ShuffleNet v2](https://arxiv.org/abs/1807.11164v1)
 
 
+- [MnasNet](http://arxiv.org/pdf/1807.11626.pdf)
+
+Google 团队提出 MnasNet,使用强化学习的思路，提出一种资源约束的终端 CNN 模型的自动神经结构搜索方法。
+
 - [EfficientNet_v1](https://arxiv.org/abs/1905.11946v3)
 
 
@@ -138,6 +142,9 @@ ZFNet 正是对 AlexNet 进行可视 化后改进而来，获得了 ILSVRC2014 �
 
 - [SENet](https://arxiv.org/abs/1709.01507)
 
+一个可嫁接/整合的Block 😇。让我们的神经网络使用全局信息来增强有用的信息，同时抑制无用的。
+
+[论文理解](/notes/SENet.md)
 
 
 ## 目标检测
