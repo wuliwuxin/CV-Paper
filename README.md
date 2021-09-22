@@ -38,6 +38,7 @@
 * [目标检测](#目标检测)
 * [图像分割](#图像分割)
 * [医学影像相关](#医学影像相关)
+* [小样本学习和元学习](#小样本学习和元学习)
 * [CV中的Attention机制](#CV中的Attention机制)
 * [其他](#其他)
 * [常用数据集](#常用数据集)
@@ -242,7 +243,744 @@ RCNN的不足之处就是：
 
  提出一个全自动的肺部CT癌症诊断系统DeepLung。DeepLung包括两部分，结节检测(识别候选结节位置)和分类（将候选结节分类为良性或恶性）。考虑到肺部CT数据的3D特性和双路径网络（DPN)的压缩性，设计了两个深度3D DPN分别用于结节检测和回归。特别地，一个带3D双路径块和U-net型编码-解码结构的Faster RCNN来高效的学习结节特征。对于结节分类，提出一个带3D双路径网络特征的梯度提升机（GBM)。在LIDC-IDRI的公开数据集络验证了结节分类子网，取得了比state-of-the-art更好的性能，并且在基于图像模式上超过了有经验医生。在DeepLung系统中，首先通过结节检测子网络检测出候选结节，然后使用分类子网络做结节诊断。广泛的实验结果表明，DeepLung在LIDC-IDRI数据集上的结节级别和患者级别诊断方面的性能均与经验丰富的医生相当。
 
+## 小样本学习和元学习
+### 基于度量学习的小样本学习算法
 
+1. [《Siamese Neural Networks for One-shot Image Recognition》](http://www.cs.toronto.edu/~gkoch/files/msc-thesis.pdf)
+  
+  网络名称：Siamese Network
+ 
+  文章来源：ICML2015
+
+  源码地址：尚未开源
+
+2. [《Matching Networks for One Shot Learning》](https://arxiv.org/pdf/1606.04080.pdf)
+  
+  网络名称：Matching Network
+  
+  文章来源：NIPS2016
+
+  源码地址：尚未开源
+  
+3. [《Prototypical Networks for Few-shot Learning》](https://arxiv.org/pdf/1703.05175.pdf)
+
+  网络名称：Prototypical Network
+  
+  文章来源：NIPS2017
+
+  [源码地址](https://github.com/jakesnell/prototypical-networks)
+  
+ 4. [《Learning to Compare: Relation Network for Few-Shot Learning》](https://arxiv.org/pdf/1711.06025.pdf)
+ 
+   网络名称：Relation Network
+   
+   文章来源：CVPR2018
+   
+   [源码地址](https://github.com/lzrobots/DeepEmbeddingModel_ZSL)
+   
+5. [《Finding Task-Relevant Features for Few-Shot Learning by Category Traversal》](https://arxiv.org/pdf/1905.11116.pdf)
+
+  网络名称：CTM
+  
+  文章来源：CVPR2019
+  
+  [源码地址](https://github.com/Clarifai/few-shot-ctm)
+
+6.[《Variational Prototyping-Encoder: One-Shot Learning with Prototypical Images》](https://arxiv.org/pdf/1904.08482.pdf)
+
+  网络名称：VPE
+  
+  文章来源：CVPR2019
+
+  [源码地址](https://github.com/mibastro/VPE)
+
+7. [《RepMet: Representative-based metric learning for classification and few-shot object detection》](https://arxiv.org/pdf/1806.04728.pdf)
+
+  网络名称：RepMet
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+8. [Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning》](https://arxiv.org/pdf/1903.12290v1.pdf)  
+
+  网络名称：DN4
+  
+  文章来源：CVPR2019
+
+  [源码地址](https://github.com/WenbinLee/DN4)
+  
+9. [《Few-Shot Learning with Localization in Realistic Settings》](https://arxiv.org/pdf/1904.08502v1.pdf)
+
+  文章来源：CVPR2019
+
+  [源码地址](https://github.com/daviswer/fewshotlocal)
+  
+10. [《Dense Classification and Implanting for Few-Shot Learning》](https://arxiv.org/pdf/1903.05050.pdf)
+
+  文章来源：CVPR2019
+ 
+  源码地址：尚未开源
+  
+11. [《TADAM: Task dependent adaptive metric for improved few-shot learning》](https://arxiv.org/pdf/1805.10123.pdf)
+
+  网络名称：TADAM
+  
+  文章来源：NIPS2018
+  
+  [源码地址](https://github.com/ElementAI/TADAM)
+  
+12. [《Power Normalizing Second-order Similarity Network for Few-shot Learning》](https://arxiv.org/abs/1811.04167v1.pdf)
+
+  网络名称：SoSN
+  
+  文章来源：WACV2019
+
+  源码地址：尚未开源
+  
+13. [《Few-Shot Learning with Metric-Agnostic Conditional Embeddings》](https://arxiv.org/pdf/1802.04376v1.pdf)
+
+  网络名称：MACO
+  
+  文章来源：CVPR2018
+ 
+  源码地址：尚未开源
+  
+14. [《Improved Few-Shot Visual Classification》](https://arxiv.org/pdf/1912.03432.pdf)
+  
+  网络名称：Simple CNAPS
+  
+  文章来源：CVPR2020
+  
+  [源码地址](https://github.com/peymanbateni/simple-cnaps)
+  
+15. [《DeepEMD: Few-Shot Image Classification with Differentiable Earth Mover’s Distance and Structured Classifier》](https://arxiv.org/abs/2003.06777v1.pdf)
+  
+  网络名称：DeepEMD
+  
+  文章来源：CVPR2020
+
+  源码地址：尚未开源
+  
+16. [《Boosting Few-Shot Learning with Adaptive Margin Loss》](https://arxiv.org/pdf/2005.13826.pdf)
+  
+  网络名称：CRAML和TRAML
+  
+  文章来源：CVPR2020
+
+  源码地址：尚未开源
+  
+17. [《Adaptive Subspaces for Few-Shot Learning》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
+
+  网络名称：DSN
+  
+  文章来源：CVPR2020
+
+  [源码地址](https://github.com/chrysts/dsn_fewshot)
+  
+18. [《Learning Embedding Adaptation for Few-Shot Learning》](https://arxiv.org/pdf/1812.03664v2.pdf)
+
+  网络名称：FEAT
+
+  [源码地址](https://github.com/Sha-Lab/FEAT)
+  
+19. [《TapNet: Neural Network Augmented with Task-Adaptive Projection for Few-Shot Learning》](https://arxiv.org/pdf/1905.06549v1.pdf)
+
+  网络名称：TapNet
+  
+  文章来源：ICML2019
+
+  源码地址：尚未开源
+  
+20. [《Few-Shot Learning with Embedded Class Models and Shot-Free Meta Training》](https://arxiv.org/pdf/1905.04398v1.pdf)
+
+  网络名称：Shot-Free
+  
+  文章来源：ICCV 2019
+
+  源码地址：尚未开源
+  
+21. [《Few-Shot Learning with Graph Neural Networks》](https://arxiv.org/pdf/1711.04043.pdf)
+
+  网络名称：GNN
+  
+  文章来源：ICLR2018
+
+  [源码地址](https://github.com/vgsatorras/few-shot-gnn)
+  
+22. [《Transductive Episodic-Wise Adaptive Metric for Few-Shot Learning》](https://arxiv.org/pdf/1910.02224.pdf)]
+
+  网络名称：TEAM
+  
+  文章来源：ICCV2019
+
+  源码地址：尚未开源
+  
+23. [《Few-Shot Learning with Global Class Representations》](https://arxiv.org/pdf/1908.05257.pdf)
+ 
+  文章来源：ICCV2019
+
+  源码地址：尚未开源
+  
+24. [《PARN: Position-Aware Relation Networks for Few-Shot Learning》](https://arxiv.org/pdf/1909.04332.pdf)
+
+  网络名称：PARN
+  
+  文章来源：ICCV2019
+ 
+  源码地址：尚未开源
+  
+25. [《Edge-Labeling Graph Neural Network for Few-shot Learning》](https://arxiv.org/pdf/1905.01436.pdf)
+
+  网络名称：EGNN
+  
+  文章来源：CVPR2019
+
+  [源码地址](https://github.com/khy0809/fewshot-egnn)
+  
+26. [《DPGN: Distribution Propagation Graph Network for Few-shot Learning》](https://arxiv.org/pdf/2003.14247.pdf)
+
+  网络名称：DPGN
+  
+  文章来源：CVPR2020
+
+  [源码地址](https://github.com/megvii-research/DPGN)
+  
+27. [《Adaptive Cross-Modal Few-shot Learning》](https://arxiv.org/pdf/1902.07104.pdf)
+  
+  网络名称：AM3
+  
+  文章来源：NIPS2019
+
+  源码地址：尚未开源
+  
+28. [《Self-attention relation network for few-shot learning》](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794911)
+  
+  网络名称：SARN
+  
+  文章来源：ICMEW2019
+
+  源码地址：尚未开源
+  
+29. [《Principal characteristic networks for few-shot learning》](https://www.sciencedirect.com/science/article/pii/S1047320319300574?via%3Dihub)
+
+  网络名称：PC-Net
+  
+  文章来源：Journal Of Visual Communication And Image Representation
+
+  源码地址：尚未开源
+  
+30. [《Instance-Level Embedding Adaptation for Few-Shot Learning》](https://ieeexplore.ieee.org/document/8672561/)
+
+  网络名称：AAM
+  
+  文章来源：IEEE Access
+
+  源码地址：尚未开源
+  
+31. [《Generative Adversarial Residual Pairwise Networks for One Shot Learning 》](http://export.arxiv.org/pdf/1703.08033)
+  
+  网络名称：SRPN
+
+  源码地址：尚未开源
+  
+32. [《Deep Triplet Ranking Networks for One-Shot Recognition》](https://arxiv.org/pdf/1804.07275.pdf)
+
+  网络名称：Triplet Ranking Networks
+
+  源码地址：尚未开源
+  
+33. [《Large Margin Few-Shot Learning》](https://arxiv.org/pdf/1807.02872.pdf)
+ 
+  网络名称：L-GNN/L-PN
+
+  源码地址：尚未开源
+  
+34. [《Distribution Consistency Based Covariance Metric Networks for Few-Shot Learning》](https://aaai.org/ojs/index.php/AAAI/article/view/4885/4758)
+ 
+  网络名称：CovaMNet
+  
+  文章来源：AAAI 2019
+
+  [源码地址](https://github.com/WenbinLee/CovaMNet)
+  
+35. [《RelationNet2: Deep Comparison Columns for Few-Shot Learning》](https://arxiv.org/pdf/1811.07100v3.pdf)
+  
+  网络名称：DCN
+  
+  文章来源：IJCNN2020
+
+  [源码地址](https://github.com/zhangxueting/DCN)
+
+### 基于参数优化的小样本学习算法
+
+1. [《Optimization as A Model for Few-shot Learning》](https://openreview.net/pdf?id=rJY0-Kcll)
+ 
+  网络名称：Meta-Learner LSTM
+  
+  文章来源：ICLR2017
+
+  [源码地址](https://github.com/twitter/meta-learning-lstm)
+  
+2. [《Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks》](https://arxiv.org/pdf/1703.03400.pdf)
+  
+  网络名称：MAML
+  
+  文章来源：ICML2017
+ 
+  [源码地址](https://github.com/vieozhu/MAML-TensorFlow-1)
+  
+3. [《Meta-SGD: Learning to Learn Quickly for Few-Shot Learning》](https://arxiv.org/pdf/1707.09835.pdf)
+  
+  网络名称：Meta-SGD
+  
+  文章来源：ICML2018
+  
+  源码地址：尚未开源
+  
+4. [《Task-Agnostic Meta-Learning for Few-shot Learning》](https://arxiv.org/pdf/1805.07722.pdf)
+ 
+  网络名称：TAML
+ 
+  文章来源：CVPR2019
+  
+  
+ 源码地址：尚未开源
+ 
+5. [《On First-Order Meta-Learning Algorithms》](https://arxiv.org/pdf/1803.02999v3.pdf)
+  
+  网络名称：Reptile
+
+  源码地址：尚未开源
+  
+6. [《Deep Meta-Learning: Learning to Learn in the Concept Space》](https://arxiv.org/abs/1802.03596.pdf)
+  
+  网络名称：DEML
+  
+  文章来源：华为诺亚方舟实验室
+  
+  源码地址：尚未开源
+  
+7. [《Meta-Learning of Neural Architectures for Few-Shot Learning》](https://arxiv.org/abs/1911.11090.pdf)
+  
+  网络名称：MetaNAS
+  
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+8. [《Attentive Weights Generation for Few Shot Learning via Information Maximization》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Attentive_Weights_Generation_for_Few_Shot_Learning_via_Information_Maximization_CVPR_2020_paper.pdf)
+  
+  网络名称：AWGIM
+  
+  文章来源：CVPR2020
+  
+  [源码地址](https://github.com/Yiluan/AWGIM)
+  
+9. [《Meta-learning with Latent Embedding Optimization》](https://arxiv.org/pdf/1807.05960.pdf)
+  
+  网络名称：LEO
+ 
+  文章来源：ICLR2019
+  
+  [源码地址](https://github.com/deepmind/leo)
+  
+10. [《Meta-learning with differentiable closed-form solvers》](https://arxiv.org/pdf/1805.08136v1.pdf)
+  
+  网络名称：R2-D2/LR-D2
+  
+  文章来源：ICLR2019
+  
+  [源码地址](https://github.com/bertinetto/r2d2)
+  
+11. [《MetAdapt: Meta-Learned Task-Adaptive Architecture for Few-Shot Classification》](https://arxiv.org/pdf/1912.00412.pdf)
+ 
+  网络名称：MetAdapt
+ 
+  源码地址：尚未开源
+  
+12. [《Gradient-Based Meta-Learning with Learned Layerwise Metric and Subspace》](https://arxiv.org/pdf/1801.05558v3.pdf)
+  
+  网络名称：T-net/MT-net
+  
+  文章来源：ICML2018
+
+  [源码地址](https://github.com/yoonholee/MT-net)
+  
+13. [《Auto-Meta: Automated Gradient Based Meta Learner Search》](https://arxiv.org/pdf/1806.06927.pdf)
+  
+  网络名称：Auto-Meta
+  
+  文章来源：NIPS2018
+  
+  源码地址：尚未开源
+
+### 基于外部记忆的小样本学习算法
+
+1. [《Meta-Learning with Memory-Augmented Neural Networks》](https://arxiv.org/pdf/1605.06065v1.pdf)
+ 
+  网络名称：MANN
+  
+  文章来源：ICML2016
+ 
+  源码地址：尚未开源
+  
+2. [《Meta Networks》](https://arxiv.org/pdf/1703.00837.pdf)
+  
+  网络名称：MetaNet
+ 
+  文章来源：ICML2017
+
+  源码地址：尚未开源
+  
+3. [《Learning to remember rare events》](https://arxiv.org/pdf/1703.03129.pdf)
+  
+  文章来源：ICLR2017
+  
+  源码地址：尚未开源
+  
+4. [《Memory Matching Networks for One-Shot Image Recognition》](https://arxiv.org/pdf/1804.08281.pdf)
+  
+  网络名称：MM-Net
+  
+  文章来源：CVPR2018
+  
+  源码地址：尚未开源
+  
+5. [《Dynamic Few-Shot Visual Learning without Forgetting》](https://arxiv.org/abs/1804.09458.pdf)
+  
+  文章来源：CVPR2018
+  
+  [源码地址](https://github.com/gidariss/FewShotWithoutForgetting)
+
+### 基于数据增强的小样本学习算法
+
+1. [《Low-Shot Visual Recognition by Shrinking and Hallucinating Features》](https://arxiv.org/pdf/1606.02819v1.pdf)
+  
+  网络名称：SGM
+  
+  文章来源：ICCV2017
+  
+  [源码地址](https://github.com/facebookresearch/low-shot-shrink-hallucinate)
+  
+2. [《Meta-learning for semi-supervised few-shot classification》](https://arxiv.org/pdf/1906.00562.pdf)
+  
+  文章来源：ICLR2018
+ 
+  [源码地址](https://github.com/renmengye/few-shot-ssl-public)
+  
+3. [《LaSO: Label-Set Operations networks for multi-label few-shot learning》](https://arxiv.org/pdf/1902.09811v1.pdf)
+  
+  网络名称：LaSONet
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+4. [《Image Deformation Meta-Networks for One-Shot Learning》](https://arxiv.org/pdf/1905.11641v1.pdf)
+  
+  网络名称：IDeMe-Net
+  
+  文章来源：CVPR2019
+  
+  [源码地址](https://github.com/tankche1/IDeMe-Net)
+  
+5. [《Few-shot Learning via Saliency-guided Hallucination of Samples》](https://arxiv.org/pdf/1904.03472v1.pdf)
+  
+  网络名称：SalNet
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+6. [《Low-Shot Learning from Imaginary Data》](https://arxiv.org/pdf/1801.05401v1.pdf)
+  
+  网络名称：PMN
+  
+  文章来源：CVPR2018
+  
+  源码地址：尚未开源
+  
+7. [《Instance Credibility Inference for Few-Shot Learning》](http://arxiv.org/abs/2003.11853.pdf)
+  
+  网络名称：ICI
+  
+  文章来源：CVPR2020
+  
+  源码地址：https://github.com/Yikai-Wang/ICI-FSL
+  
+8. [《Adversarial Feature Hallucination Networks for Few-Shot Learning》](https://arxiv.org/pdf/2003.13193.pdf)
+  
+  网络名称：AFHN
+  
+  文章来源：CVPR2020
+ 
+  源码地址：尚未开源
+  
+9. [《∆-encoder: an effective sample synthesis method for few-shot object recognition》](https://arxiv.org/pdf/1806.04734.pdf)
+  
+  网络名称：∆-encoder
+  
+  文章来源：NIPS2018
+ 
+  [源码地址](https://github.com/EliSchwartz/DeltaEncoder)
+
+### 基于语义信息的小样本学习算法
+1. [《Large-Scale Few-Shot Learning: Knowledge Transfer With Class Hierarchy》]()https://www.researchgate.net/profile/Zhiwu_Lu2/publication/333602008_Large-Scale_Few-Shot_Learning_Knowledge_Transfer_With_Class_Hierarchy/links/5cf61bffa6fdcc847502e9de/Large-Scale-Few-Shot-Learning-Knowledge-Transfer-With-Class-Hierarchy.pdf
+ 
+  文章来源：CVPR2019
+ 
+  源码地址：尚未开源
+  
+2. [《Generalized Zero- and Few-Shot Learning via Aligned Variational Autoencoders》](https://arxiv.org/pdf/1812.01784.pdf)
+  
+  网络名称：CADA-VAE
+  
+  文章来源：CVPR2019
+  
+  [源码地址](https://github.com/edgarschnfld/CADA-VAE-PyTorch)
+  
+3. [《TAFE-Net: Task-Aware Feature Embeddings for Low Shot Learning》](https://arxiv.org/pdf/1904.05967.pdf)
+  
+  网络名称：TAFE-Net
+  
+  文章来源：CVPR2019
+ 
+  源码地址：https://github.com/ucbdrive/tafe-net
+  
+4. [《Baby Steps Towards Few-Shot Learning with Multiple Semantics》](https://arxiv.org/pdf/1906.01905.pdf)
+  
+  网络名称：Multiple-Semantics
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+5. [《Semantic Feature Augmentation in Few-shot Learning》](https://arxiv.org/pdf/1804.05298v1.pdf)
+  
+  网络名称：Dual-TriNet
+  
+  文章来源：ECCV2018
+ 
+  [源码地址](https://github.com/tankche1/Semantic-Feature-Augmentation-in-Few-shot-Learning)
+
+6. [《Learning Compositional Representations for Few-Shot Recognition》](https://arxiv.org/pdf/1812.09213.pdf)
+  
+  网络名称：comp
+  
+  文章来源：ICCV2019
+ 
+  [源码地址](https://sites.google.com/view/comprepr/home)
+  
+7. [《Few-Shot Image Recognition with Knowledge Transfer》](http://openaccess.thecvf.com/content_ICCV_2019/papers/Peng_Few-Shot_Image_Recognition_With_Knowledge_Transfer_ICCV_2019_paper.pdf)
+  
+  网络名称：KTN
+  
+  文章来源：ICCV2019
+
+  源码地址：尚未开源
+
+### 其他类型的小样本学习算法
+1. [《Active One-shot Learning》](https://arxiv.org/pdf/1702.06559.pdf)
+  
+  文章来源：NIPS2016
+ 
+  源码地址：尚未开源
+  
+2. [《Spot and Learn: A Maximum-Entropy Patch Sampler for Few-Shot Image Classification》](http://openaccess.thecvf.com/content_CVPR_2019/papers/Chu_Spot_and_Learn_A_Maximum-Entropy_Patch_Sampler_for_Few-Shot_Image_CVPR_2019_paper.pdf?source=post_page)
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+3. [《Meta-Learning with Temporal Convolutions》/《A simple neural attentive meta-learner》](https://arxiv.org/pdf/1707.03141v2.pdf)
+  
+  网络名称：TCML/SNAIL
+  
+  文章来源：ICLR2018
+ 
+  源码地址：尚未开源
+  
+4. [《Meta-Transfer Learning for Few-Shot Learning》](https://arxiv.org/pdf/1812.02391v2.pdf)
+  
+  网络名称：MTL
+  
+  文章来源：CVPR2019
+  
+  [源码地址](https://github.com/yaoyao-liu/meta-transfer-learning)
+  
+5. [《Learning to propagate labels: Transductive propagation network for few-shot learning》](http://arxiv.org/abs/1805.10002.pdf)
+  
+  网络名称：TPN
+  
+  文章来源：ICLR2019
+  
+  源码地址：尚未开源
+  
+6. [《Few-Shot Class-Incremental Learning》](https://arxiv.org/pdf/2004.10956.pdf)
+  
+  网络名称：TOPIC
+  
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+7. [《Learning to Select Base Classes for Few-shot Classification》](https://arxiv.org/abs/2004.00315.pdf)
+
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+8. [《TransMatch: A Transfer-Learning Scheme for Semi-Supervised Few-Shot Learning》](https://arxiv.org/pdf/1912.09033.pdf)
+  
+  网络名称：TransMatch
+  
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+9. [《A closer look at few-shot classification》](https://arxiv.org/pdf/1904.04232v1.pdf)
+
+  网络名称：CloserLook
+ 
+  文章来源：ICLR2019
+  
+  [源码地址](https://github.com/wyharveychen/CloserLookFewShot)
+  
+10. [《Low-Shot Learning with Imprinted Weights》](https://arxiv.org/pdf/1712.07136.pdf)
+  
+  网络名称：Imprinting
+  
+  文章来源：CVPR 2018
+  
+  源码地址：尚未开源
+  
+11. [《Boosting Few-Shot Visual Learning with Self-Supervision》](ttps://arxiv.org/pdf/1906.05186v1.pdf)
+  
+  文章来源：ICCV 2019
+  
+  源码地址：尚未开源
+  
+12. [《Diversity with Cooperation: Ensemble Methods for Few-Shot Classification》](https://arxiv.org/pdf/1903.11341v1.pdf)
+  
+  网络名称：Robust-dist
+  
+  文章来源：ICCV2019
+  
+  源码地址：尚未开源
+  
+13. [《SimpleShot: Revisiting Nearest-Neighbor Classification for Few-Shot Learning》](https://arxiv.org/pdf/1911.04623.pdf)
+  
+  网络名称：SimpleShot
+  
+  [源码地址](https://github.com/mileyan/simple_shot)
+  
+14. [《Few-shot Classification via Adaptive Attention》](https://arxiv.org/pdf/2008.02465.pdf)
+
+  源码地址：尚未开源
+  
+15. [《Few-Shot Image Recognition by Predicting Parameters from Activations》](http://arxiv.org/abs/1706.03466.pdf)
+  
+  网络名称：PPA
+  
+  文章来源：CVPR 2018
+  
+  源码地址：尚未开源
+  
+16. [《Generating Classification Weights with GNN Denoising Autoencoders for Few-Shot Learning》](https://arxiv.org/pdf/1905.01102v1.pdf)
+  
+  网络名称：DAE
+  
+  文章来源：CVPR2019
+  
+  [源码地址](https://github.com/gidariss/wDAE_GNN_FewShot)
+  
+17. [《Few-Shot Learning Through an Information Retrieval Lens》](https://arxiv.org/pdf/1707.02610.pdf)
+  
+  网络名称：mAP-SSVM，mAP-DLM
+  
+  文章来源：NIPS2017
+  
+  源码地址：尚未开源
+
+### 小样本语义分割算法
+1. [《One-Shot Learning for Semantic Segmentation》](https://arxiv.org/pdf/1709.03410.pdf)
+
+  文章来源：BMVC2017
+  
+  [源码地址](https://github.com/lzzcd001/OSLSM)
+  
+2. [《Conditional networks for few-shot semantic segmentation》](https://openreview.net/pdf?id=SkMjFKJwG)
+  
+  网络名称：co-FCN
+ 
+  文章来源：ICLR2018
+  
+  
+  源码地址：尚未开源
+  
+3. [《CANet: Class-Agnostic Segmentation Networks with Iterative Refinement and Attentive Few-Shot Learning》](https://arxiv.org/pdf/1903.02351.pdf)
+  
+  网络名称：CANet
+  
+  文章来源：CVPR2019
+  
+  源码地址：尚未开源
+  
+4. [《PANet: Few-Shot Image Semantic Segmentation with Prototype Alignment》](https://arxiv.org/pdf/1908.06391.pdf)
+ 
+  网络名称：PANet
+ 
+  文章来源：ICCV2019
+  
+  源码地址：尚未开源
+
+### 小样本目标检测算法
+1. [《LSTD: A Low-Shot Transfer Detector for Object Detection》](https://arxiv.org/pdf/1803.01529.pdf)
+  
+  网络名称：LSTD
+  
+  文章来源：AAAI2018
+
+  源码地址：尚未开源
+  
+2. [《Few-Example Object Detection with Model Communication》](https://arxiv.org/pdf/1706.08249.pdf)
+ 
+  网络名称：MSPLD
+ 
+  文章来源：TPAMI2018
+  
+  源码地址：尚未开源
+  
+3. [《Incremental Few-Shot Object Detection》](https://arxiv.org/pdf/2003.04668.pdf)
+  
+  网络名称：ONCE
+  
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+4. [《Few-Shot Object Detection with Attention-RPN and Multi-Relation Detector》](https://arxiv.org/abs/1908.01998.pdf)
+
+  文章来源：CVPR2020
+  
+  源码地址：尚未开源
+  
+5. [《Few-shot Object Detection via Feature Reweighting》](https://arxiv.org/abs/1812.01866.pdf)
+
+  文章来源：ICCV2019
+
+  源码地址：尚未开源
+  
+6.[《Meta R-CNN : Towards General Solver for Instance-level Low-shot Learning》](http://arxiv.org/abs/1909.13032v1.pdf)
+  
+  网络名称：Meta R-CNN
+  
+  文章来源：ICCV2019
+  
+  [源码地址](https://github.com/yanxp/MetaR-CNN)
+
+ 
 ## CV中的Attention机制
 - [Transformer](https://arxiv.org/abs/1706.03762)
 
