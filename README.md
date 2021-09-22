@@ -248,9 +248,12 @@ RCNN的不足之处就是：
 
 - [《Siamese Neural Networks for One-shot Image Recognition》](http://www.cs.toronto.edu/~gkoch/files/msc-thesis.pdf)
   
+
 网络名称：Siamese Network
+
  
 文章来源：ICML2015
+
 
 源码地址：尚未开源
 
