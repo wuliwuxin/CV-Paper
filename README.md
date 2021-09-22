@@ -251,9 +251,7 @@ RCNN的不足之处就是：
 
 网络名称：Siamese Network
 
- 
 文章来源：ICML2015
-
 
 源码地址：尚未开源
 
