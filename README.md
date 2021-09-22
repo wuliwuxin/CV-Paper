@@ -258,6 +258,7 @@ RCNN的不足之处就是：
 
 - [《Matching Networks for One Shot Learning》](https://arxiv.org/pdf/1606.04080.pdf)
   
+
 网络名称：Matching Network
   
 文章来源：NIPS2016
@@ -267,56 +268,59 @@ RCNN的不足之处就是：
   
 - [《Prototypical Networks for Few-shot Learning》](https://arxiv.org/pdf/1703.05175.pdf)
 
-  网络名称：Prototypical Network
+网络名称：Prototypical Network
   
-  文章来源：NIPS2017
+文章来源：NIPS2017
 
-  [源码地址](https://github.com/jakesnell/prototypical-networks)
+[源码地址](https://github.com/jakesnell/prototypical-networks)
   
 - [《Learning to Compare: Relation Network for Few-Shot Learning》](https://arxiv.org/pdf/1711.06025.pdf)
  
  
-   网络名称：Relation Network
+网络名称：Relation Network
+      
+文章来源：CVPR2018
    
-   
-   文章来源：CVPR2018
-   
-  
-   [源码地址](https://github.com/lzrobots/DeepEmbeddingModel_ZSL)
+[源码地址](https://github.com/lzrobots/DeepEmbeddingModel_ZSL)
+
    
 -  [《Finding Task-Relevant Features for Few-Shot Learning by Category Traversal》](https://arxiv.org/pdf/1905.11116.pdf)
 
-  网络名称：CTM
+
+网络名称：CTM
   
-  文章来源：CVPR2019
+文章来源：CVPR2019
   
-  [源码地址](https://github.com/Clarifai/few-shot-ctm)
+[源码地址](https://github.com/Clarifai/few-shot-ctm)
 
 - [《Variational Prototyping-Encoder: One-Shot Learning with Prototypical Images》](https://arxiv.org/pdf/1904.08482.pdf)
 
-  网络名称：VPE
-  
-  文章来源：CVPR2019
 
-  [源码地址](https://github.com/mibastro/VPE)
+网络名称：VPE
+  
+文章来源：CVPR2019
+
+[源码地址](https://github.com/mibastro/VPE)
 
 - [《RepMet: Representative-based metric learning for classification and few-shot object detection》](https://arxiv.org/pdf/1806.04728.pdf)
 
-  网络名称：RepMet
-  
-  文章来源：CVPR2019
-  
-  源码地址：尚未开源
-  
-8. [Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning》](https://arxiv.org/pdf/1903.12290v1.pdf)  
 
-  网络名称：DN4
+网络名称：RepMet
   
-  文章来源：CVPR2019
+文章来源：CVPR2019
+  
+源码地址：尚未开源
+  
+- [Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning》](https://arxiv.org/pdf/1903.12290v1.pdf)  
 
-  [源码地址](https://github.com/WenbinLee/DN4)
+
+网络名称：DN4
   
-9. [《Few-Shot Learning with Localization in Realistic Settings》](https://arxiv.org/pdf/1904.08502v1.pdf)
+文章来源：CVPR2019
+
+[源码地址](https://github.com/WenbinLee/DN4)
+  
+- [《Few-Shot Learning with Localization in Realistic Settings》](https://arxiv.org/pdf/1904.08502v1.pdf)
 
   文章来源：CVPR2019
 
@@ -324,9 +328,11 @@ RCNN的不足之处就是：
   
 10. [《Dense Classification and Implanting for Few-Shot Learning》](https://arxiv.org/pdf/1903.05050.pdf)
 
-  文章来源：CVPR2019
+
+文章来源：CVPR2019
  
-  源码地址：尚未开源
+源码地址：尚未开源
+
   
 11. [《TADAM: Task dependent adaptive metric for improved few-shot learning》](https://arxiv.org/pdf/1805.10123.pdf)
 
