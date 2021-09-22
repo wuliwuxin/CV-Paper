@@ -246,7 +246,7 @@ RCNN的不足之处就是：
 ## 小样本学习和元学习
 ### 基于度量学习的小样本学习算法
 
-1. [《Siamese Neural Networks for One-shot Image Recognition》](http://www.cs.toronto.edu/~gkoch/files/msc-thesis.pdf)
+- [《Siamese Neural Networks for One-shot Image Recognition》](http://www.cs.toronto.edu/~gkoch/files/msc-thesis.pdf)
   
   网络名称：Siamese Network
  
@@ -254,7 +254,7 @@ RCNN的不足之处就是：
 
   源码地址：尚未开源
 
-2. [《Matching Networks for One Shot Learning》](https://arxiv.org/pdf/1606.04080.pdf)
+- [《Matching Networks for One Shot Learning》](https://arxiv.org/pdf/1606.04080.pdf)
   
   网络名称：Matching Network
   
@@ -262,7 +262,7 @@ RCNN的不足之处就是：
 
   源码地址：尚未开源
   
-3. [《Prototypical Networks for Few-shot Learning》](https://arxiv.org/pdf/1703.05175.pdf)
+- [《Prototypical Networks for Few-shot Learning》](https://arxiv.org/pdf/1703.05175.pdf)
 
   网络名称：Prototypical Network
   
@@ -270,7 +270,7 @@ RCNN的不足之处就是：
 
   [源码地址](https://github.com/jakesnell/prototypical-networks)
   
- 4. [《Learning to Compare: Relation Network for Few-Shot Learning》](https://arxiv.org/pdf/1711.06025.pdf)
+- [《Learning to Compare: Relation Network for Few-Shot Learning》](https://arxiv.org/pdf/1711.06025.pdf)
  
    网络名称：Relation Network
    
@@ -278,7 +278,7 @@ RCNN的不足之处就是：
    
    [源码地址](https://github.com/lzrobots/DeepEmbeddingModel_ZSL)
    
-5. [《Finding Task-Relevant Features for Few-Shot Learning by Category Traversal》](https://arxiv.org/pdf/1905.11116.pdf)
+-  [《Finding Task-Relevant Features for Few-Shot Learning by Category Traversal》](https://arxiv.org/pdf/1905.11116.pdf)
 
   网络名称：CTM
   
@@ -286,7 +286,7 @@ RCNN的不足之处就是：
   
   [源码地址](https://github.com/Clarifai/few-shot-ctm)
 
-6.[《Variational Prototyping-Encoder: One-Shot Learning with Prototypical Images》](https://arxiv.org/pdf/1904.08482.pdf)
+- [《Variational Prototyping-Encoder: One-Shot Learning with Prototypical Images》](https://arxiv.org/pdf/1904.08482.pdf)
 
   网络名称：VPE
   
@@ -294,7 +294,7 @@ RCNN的不足之处就是：
 
   [源码地址](https://github.com/mibastro/VPE)
 
-7. [《RepMet: Representative-based metric learning for classification and few-shot object detection》](https://arxiv.org/pdf/1806.04728.pdf)
+- [《RepMet: Representative-based metric learning for classification and few-shot object detection》](https://arxiv.org/pdf/1806.04728.pdf)
 
   网络名称：RepMet
   
