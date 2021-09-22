@@ -449,182 +449,229 @@ RCNN的不足之处就是：
 [源码地址](https://github.com/vgsatorras/few-shot-gnn)
   
   
-22. [《Transductive Episodic-Wise Adaptive Metric for Few-Shot Learning》](https://arxiv.org/pdf/1910.02224.pdf)]
+- [《Transductive Episodic-Wise Adaptive Metric for Few-Shot Learning》](https://arxiv.org/pdf/1910.02224.pdf)]
 
-  网络名称：TEAM
-  
-  文章来源：ICCV2019
 
-  源码地址：尚未开源
+网络名称：TEAM
   
-23. [《Few-Shot Learning with Global Class Representations》](https://arxiv.org/pdf/1908.05257.pdf)
+文章来源：ICCV2019
+
+源码地址：尚未开源
+  
+  
+- [《Few-Shot Learning with Global Class Representations》](https://arxiv.org/pdf/1908.05257.pdf)
  
-  文章来源：ICCV2019
-
-  源码地址：尚未开源
-  
-24. [《PARN: Position-Aware Relation Networks for Few-Shot Learning》](https://arxiv.org/pdf/1909.04332.pdf)
-
-  网络名称：PARN
-  
-  文章来源：ICCV2019
  
-  源码地址：尚未开源
-  
-25. [《Edge-Labeling Graph Neural Network for Few-shot Learning》](https://arxiv.org/pdf/1905.01436.pdf)
+文章来源：ICCV2019
 
-  网络名称：EGNN
+源码地址：尚未开源
   
-  文章来源：CVPR2019
+  
+- [《PARN: Position-Aware Relation Networks for Few-Shot Learning》](https://arxiv.org/pdf/1909.04332.pdf)
 
-  [源码地址](https://github.com/khy0809/fewshot-egnn)
-  
-26. [《DPGN: Distribution Propagation Graph Network for Few-shot Learning》](https://arxiv.org/pdf/2003.14247.pdf)
 
-  网络名称：DPGN
+网络名称：PARN
   
-  文章来源：CVPR2020
-
-  [源码地址](https://github.com/megvii-research/DPGN)
-  
-27. [《Adaptive Cross-Modal Few-shot Learning》](https://arxiv.org/pdf/1902.07104.pdf)
-  
-  网络名称：AM3
-  
-  文章来源：NIPS2019
-
-  源码地址：尚未开源
-  
-28. [《Self-attention relation network for few-shot learning》](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794911)
-  
-  网络名称：SARN
-  
-  文章来源：ICMEW2019
-
-  源码地址：尚未开源
-  
-29. [《Principal characteristic networks for few-shot learning》](https://www.sciencedirect.com/science/article/pii/S1047320319300574?via%3Dihub)
-
-  网络名称：PC-Net
-  
-  文章来源：Journal Of Visual Communication And Image Representation
-
-  源码地址：尚未开源
-  
-30. [《Instance-Level Embedding Adaptation for Few-Shot Learning》](https://ieeexplore.ieee.org/document/8672561/)
-
-  网络名称：AAM
-  
-  文章来源：IEEE Access
-
-  源码地址：尚未开源
-  
-31. [《Generative Adversarial Residual Pairwise Networks for One Shot Learning 》](http://export.arxiv.org/pdf/1703.08033)
-  
-  网络名称：SRPN
-
-  源码地址：尚未开源
-  
-32. [《Deep Triplet Ranking Networks for One-Shot Recognition》](https://arxiv.org/pdf/1804.07275.pdf)
-
-  网络名称：Triplet Ranking Networks
-
-  源码地址：尚未开源
-  
-33. [《Large Margin Few-Shot Learning》](https://arxiv.org/pdf/1807.02872.pdf)
+文章来源：ICCV2019
  
-  网络名称：L-GNN/L-PN
-
-  源码地址：尚未开源
+源码地址：尚未开源 
   
-34. [《Distribution Consistency Based Covariance Metric Networks for Few-Shot Learning》](https://aaai.org/ojs/index.php/AAAI/article/view/4885/4758)
+  
+- [《Edge-Labeling Graph Neural Network for Few-shot Learning》](https://arxiv.org/pdf/1905.01436.pdf)
+
+
+网络名称：EGNN
+  
+文章来源：CVPR2019
+
+[源码地址](https://github.com/khy0809/fewshot-egnn)
+
+  
+- [《DPGN: Distribution Propagation Graph Network for Few-shot Learning》](https://arxiv.org/pdf/2003.14247.pdf)
+
+
+网络名称：DPGN
+  
+文章来源：CVPR2020
+
+[源码地址](https://github.com/megvii-research/DPGN)
+
+  
+- [《Adaptive Cross-Modal Few-shot Learning》](https://arxiv.org/pdf/1902.07104.pdf)
+  
+
+网络名称：AM3
+
+文章来源：NIPS2019
+
+源码地址：尚未开源
+
+  
+- [《Self-attention relation network for few-shot learning》](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8794911)
+  
+
+网络名称：SARN
+
+文章来源：ICMEW2019
+
+源码地址：尚未开源
+
+  
+- [《Principal characteristic networks for few-shot learning》](https://www.sciencedirect.com/science/article/pii/S1047320319300574?via%3Dihub)
+
+
+网络名称：PC-Net
+  
+文章来源：Journal Of Visual Communication And Image Representation
+
+源码地址：尚未开源
+
+  
+- [《Instance-Level Embedding Adaptation for Few-Shot Learning》](https://ieeexplore.ieee.org/document/8672561/)
+
+
+网络名称：AAM
+
+文章来源：IEEE Access
+
+源码地址：尚未开源
+
+  
+- [《Generative Adversarial Residual Pairwise Networks for One Shot Learning 》](http://export.arxiv.org/pdf/1703.08033)
+  
+  
+
+网络名称：SRPN
+
+源码地址：尚未开源
+
+  
+- [《Deep Triplet Ranking Networks for One-Shot Recognition》](https://arxiv.org/pdf/1804.07275.pdf)
+
+
+网络名称：Triplet Ranking Networks
+
+源码地址：尚未开源
+
+  
+- [《Large Margin Few-Shot Learning》](https://arxiv.org/pdf/1807.02872.pdf)
  
-  网络名称：CovaMNet
-  
-  文章来源：AAAI 2019
 
-  [源码地址](https://github.com/WenbinLee/CovaMNet)
-  
-35. [《RelationNet2: Deep Comparison Columns for Few-Shot Learning》](https://arxiv.org/pdf/1811.07100v3.pdf)
-  
-  网络名称：DCN
-  
-  文章来源：IJCNN2020
+网络名称：L-GNN/L-PN
 
-  [源码地址](https://github.com/zhangxueting/DCN)
+
+源码地址：尚未开源
+
+  
+- [《Distribution Consistency Based Covariance Metric Networks for Few-Shot Learning》](https://aaai.org/ojs/index.php/AAAI/article/view/4885/4758)
+ 
+
+网络名称：CovaMNet
+  
+文章来源：AAAI 2019
+
+[源码地址](https://github.com/WenbinLee/CovaMNet)
+
+  
+- [《RelationNet2: Deep Comparison Columns for Few-Shot Learning》](https://arxiv.org/pdf/1811.07100v3.pdf)
+  
+
+网络名称：DCN
+  
+文章来源：IJCNN2020
+
+[源码地址](https://github.com/zhangxueting/DCN)
+
 
 ### 基于参数优化的小样本学习算法
 
-1. [《Optimization as A Model for Few-shot Learning》](https://openreview.net/pdf?id=rJY0-Kcll)
+- [《Optimization as A Model for Few-shot Learning》](https://openreview.net/pdf?id=rJY0-Kcll)
  
-  网络名称：Meta-Learner LSTM
-  
-  文章来源：ICLR2017
 
-  [源码地址](https://github.com/twitter/meta-learning-lstm)
+网络名称：Meta-Learner LSTM
   
-2. [《Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks》](https://arxiv.org/pdf/1703.03400.pdf)
-  
-  网络名称：MAML
-  
-  文章来源：ICML2017
- 
-  [源码地址](https://github.com/vieozhu/MAML-TensorFlow-1)
-  
-3. [《Meta-SGD: Learning to Learn Quickly for Few-Shot Learning》](https://arxiv.org/pdf/1707.09835.pdf)
-  
-  网络名称：Meta-SGD
-  
-  文章来源：ICML2018
-  
-  源码地址：尚未开源
-  
-4. [《Task-Agnostic Meta-Learning for Few-shot Learning》](https://arxiv.org/pdf/1805.07722.pdf)
- 
-  网络名称：TAML
- 
-  文章来源：CVPR2019
-  
-  
- 源码地址：尚未开源
- 
-5. [《On First-Order Meta-Learning Algorithms》](https://arxiv.org/pdf/1803.02999v3.pdf)
-  
-  网络名称：Reptile
+文章来源：ICLR2017
 
-  源码地址：尚未开源
+[源码地址](https://github.com/twitter/meta-learning-lstm)
+
   
-6. [《Deep Meta-Learning: Learning to Learn in the Concept Space》](https://arxiv.org/abs/1802.03596.pdf)
+- [《Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks》](https://arxiv.org/pdf/1703.03400.pdf)
   
-  网络名称：DEML
   
-  文章来源：华为诺亚方舟实验室
+网络名称：MAML
   
-  源码地址：尚未开源
-  
-7. [《Meta-Learning of Neural Architectures for Few-Shot Learning》](https://arxiv.org/abs/1911.11090.pdf)
-  
-  网络名称：MetaNAS
-  
-  文章来源：CVPR2020
-  
-  源码地址：尚未开源
-  
-8. [《Attentive Weights Generation for Few Shot Learning via Information Maximization》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Attentive_Weights_Generation_for_Few_Shot_Learning_via_Information_Maximization_CVPR_2020_paper.pdf)
-  
-  网络名称：AWGIM
-  
-  文章来源：CVPR2020
-  
-  [源码地址](https://github.com/Yiluan/AWGIM)
-  
-9. [《Meta-learning with Latent Embedding Optimization》](https://arxiv.org/pdf/1807.05960.pdf)
-  
-  网络名称：LEO
+文章来源：ICML2017
  
-  文章来源：ICLR2019
+[源码地址](https://github.com/vieozhu/MAML-TensorFlow-1)
+
   
-  [源码地址](https://github.com/deepmind/leo)
+- [《Meta-SGD: Learning to Learn Quickly for Few-Shot Learning》](https://arxiv.org/pdf/1707.09835.pdf)
+  
+
+网络名称：Meta-SGD
+  
+文章来源：ICML2018
+  
+源码地址：尚未开源
+
+  
+- [《Task-Agnostic Meta-Learning for Few-shot Learning》](https://arxiv.org/pdf/1805.07722.pdf)
+ 
+
+网络名称：TAML
+ 
+文章来源：CVPR2019
+  
+源码地址：尚未开源
+
+ 
+- [《On First-Order Meta-Learning Algorithms》](https://arxiv.org/pdf/1803.02999v3.pdf)
+
+  
+网络名称：Reptile
+
+源码地址：尚未开源
+
+  
+- [《Deep Meta-Learning: Learning to Learn in the Concept Space》](https://arxiv.org/abs/1802.03596.pdf)
+  
+
+网络名称：DEML
+  
+文章来源：华为诺亚方舟实验室
+  
+源码地址：尚未开源
+
+  
+- [《Meta-Learning of Neural Architectures for Few-Shot Learning》](https://arxiv.org/abs/1911.11090.pdf)
+  
+
+网络名称：MetaNAS
+  
+文章来源：CVPR2020
+  
+源码地址：尚未开源
+
+  
+- [《Attentive Weights Generation for Few Shot Learning via Information Maximization》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Attentive_Weights_Generation_for_Few_Shot_Learning_via_Information_Maximization_CVPR_2020_paper.pdf)
+  
+
+网络名称：AWGIM
+  
+文章来源：CVPR2020
+  
+[源码地址](https://github.com/Yiluan/AWGIM)
+  
+- [《Meta-learning with Latent Embedding Optimization》](https://arxiv.org/pdf/1807.05960.pdf)
+  
+
+网络名称：LEO
+ 
+文章来源：ICLR2019
+  
+
+[源码地址](https://github.com/deepmind/leo)
+
   
 10. [《Meta-learning with differentiable closed-form solvers》](https://arxiv.org/pdf/1805.08136v1.pdf)
   
@@ -1079,6 +1126,8 @@ Transformer由论文《Attention is All You Need》提出，现在是谷歌云TP
 * [COCO](#COCO)
 * [CIFAR-10](#CIFAR-10)
 * [PASCAL VOC](#PASCAL-VOC)
+* [Omniglot数据集](#Omniglot数据集)
+* [Mini-ImageNet](#Mini-ImageNet)
 
 ### [ImageNet](https://paperswithcode.com/dataset/imagenet)
  
@@ -1126,6 +1175,17 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 * [VOC2012-trainval](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 官网时常不稳定，进而导致下载较慢甚至下载失败，推荐一定稳定的镜像源地址：[YOLOv3作者主页](https://pjreddie.com/projects/pascal-voc-dataset-mirror/)
 
+### Omniglot数据集
+
+- [Office websit](https://github.com/brendenlake/omniglot/)
+
+- [Tensorflow](http://tensorflow.org/datasets/catalog/omniglot/)
+
+### Mini-ImageNet
+
+- [PaperCode])https://paperswithcode.com/dataset/miniimagenet-1)
+
+- [DeepAI](https://deepai.org/dataset/imagenet)
 
 ## 赞助和支持
 
