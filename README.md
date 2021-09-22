@@ -268,11 +268,13 @@ RCNN的不足之处就是：
   
 - [《Prototypical Networks for Few-shot Learning》](https://arxiv.org/pdf/1703.05175.pdf)
 
+
 网络名称：Prototypical Network
   
 文章来源：NIPS2017
 
 [源码地址](https://github.com/jakesnell/prototypical-networks)
+  
   
 - [《Learning to Compare: Relation Network for Few-Shot Learning》](https://arxiv.org/pdf/1711.06025.pdf)
  
@@ -293,6 +295,7 @@ RCNN的不足之处就是：
   
 [源码地址](https://github.com/Clarifai/few-shot-ctm)
 
+
 - [《Variational Prototyping-Encoder: One-Shot Learning with Prototypical Images》](https://arxiv.org/pdf/1904.08482.pdf)
 
 
@@ -302,6 +305,7 @@ RCNN的不足之处就是：
 
 [源码地址](https://github.com/mibastro/VPE)
 
+
 - [《RepMet: Representative-based metric learning for classification and few-shot object detection》](https://arxiv.org/pdf/1806.04728.pdf)
 
 
@@ -310,6 +314,7 @@ RCNN的不足之处就是：
 文章来源：CVPR2019
   
 源码地址：尚未开源
+ 
   
 - [Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning》](https://arxiv.org/pdf/1903.12290v1.pdf)  
 
@@ -319,14 +324,16 @@ RCNN的不足之处就是：
 文章来源：CVPR2019
 
 [源码地址](https://github.com/WenbinLee/DN4)
+
   
 - [《Few-Shot Learning with Localization in Realistic Settings》](https://arxiv.org/pdf/1904.08502v1.pdf)
 
-  文章来源：CVPR2019
+文章来源：CVPR2019
 
-  [源码地址](https://github.com/daviswer/fewshotlocal)
+[源码地址](https://github.com/daviswer/fewshotlocal)
+ 
   
-10. [《Dense Classification and Implanting for Few-Shot Learning》](https://arxiv.org/pdf/1903.05050.pdf)
+- [《Dense Classification and Implanting for Few-Shot Learning》](https://arxiv.org/pdf/1903.05050.pdf)
 
 
 文章来源：CVPR2019
@@ -334,91 +341,113 @@ RCNN的不足之处就是：
 源码地址：尚未开源
 
   
-11. [《TADAM: Task dependent adaptive metric for improved few-shot learning》](https://arxiv.org/pdf/1805.10123.pdf)
+- [《TADAM: Task dependent adaptive metric for improved few-shot learning》](https://arxiv.org/pdf/1805.10123.pdf)
 
-  网络名称：TADAM
-  
-  文章来源：NIPS2018
-  
-  [源码地址](https://github.com/ElementAI/TADAM)
-  
-12. [《Power Normalizing Second-order Similarity Network for Few-shot Learning》](https://arxiv.org/abs/1811.04167v1.pdf)
 
-  网络名称：SoSN
+网络名称：TADAM
   
-  文章来源：WACV2019
+文章来源：NIPS2018
+  
+[源码地址](https://github.com/ElementAI/TADAM)
+  
+  
+- [《Power Normalizing Second-order Similarity Network for Few-shot Learning》](https://arxiv.org/abs/1811.04167v1.pdf)
+ 
+ 
+网络名称：SoSN
+  
+文章来源：WACV2019
 
-  源码地址：尚未开源
+源码地址：尚未开源
   
-13. [《Few-Shot Learning with Metric-Agnostic Conditional Embeddings》](https://arxiv.org/pdf/1802.04376v1.pdf)
+  
+- [《Few-Shot Learning with Metric-Agnostic Conditional Embeddings》](https://arxiv.org/pdf/1802.04376v1.pdf)
 
-  网络名称：MACO
+
+网络名称：MACO
   
-  文章来源：CVPR2018
+文章来源：CVPR2018
  
-  源码地址：尚未开源
-  
-14. [《Improved Few-Shot Visual Classification》](https://arxiv.org/pdf/1912.03432.pdf)
-  
-  网络名称：Simple CNAPS
-  
-  文章来源：CVPR2020
-  
-  [源码地址](https://github.com/peymanbateni/simple-cnaps)
-  
-15. [《DeepEMD: Few-Shot Image Classification with Differentiable Earth Mover’s Distance and Structured Classifier》](https://arxiv.org/abs/2003.06777v1.pdf)
-  
-  网络名称：DeepEMD
-  
-  文章来源：CVPR2020
+源码地址：尚未开源
 
-  源码地址：尚未开源
   
-16. [《Boosting Few-Shot Learning with Adaptive Margin Loss》](https://arxiv.org/pdf/2005.13826.pdf)
+- [《Improved Few-Shot Visual Classification》](https://arxiv.org/pdf/1912.03432.pdf)
   
-  网络名称：CRAML和TRAML
   
-  文章来源：CVPR2020
+网络名称：Simple CNAPS
+  
+文章来源：CVPR2020
+  
+[源码地址](https://github.com/peymanbateni/simple-cnaps)
+ 
+  
+- [《DeepEMD: Few-Shot Image Classification with Differentiable Earth Mover’s Distance and Structured Classifier》](https://arxiv.org/abs/2003.06777v1.pdf)
 
-  源码地址：尚未开源
   
-17. [《Adaptive Subspaces for Few-Shot Learning》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
-
-  网络名称：DSN
+网络名称：DeepEMD
   
-  文章来源：CVPR2020
+文章来源：CVPR2020
 
-  [源码地址](https://github.com/chrysts/dsn_fewshot)
+源码地址：尚未开源
+
   
-18. [《Learning Embedding Adaptation for Few-Shot Learning》](https://arxiv.org/pdf/1812.03664v2.pdf)
+- [《Boosting Few-Shot Learning with Adaptive Margin Loss》](https://arxiv.org/pdf/2005.13826.pdf)
 
-  网络名称：FEAT
-
-  [源码地址](https://github.com/Sha-Lab/FEAT)
   
-19. [《TapNet: Neural Network Augmented with Task-Adaptive Projection for Few-Shot Learning》](https://arxiv.org/pdf/1905.06549v1.pdf)
-
-  网络名称：TapNet
+网络名称：CRAML和TRAML
   
-  文章来源：ICML2019
+文章来源：CVPR2020
 
-  源码地址：尚未开源
+源码地址：尚未开源
   
-20. [《Few-Shot Learning with Embedded Class Models and Shot-Free Meta Training》](https://arxiv.org/pdf/1905.04398v1.pdf)
-
-  网络名称：Shot-Free
   
-  文章来源：ICCV 2019
+- [《Adaptive Subspaces for Few-Shot Learning》](http://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
 
-  源码地址：尚未开源
+
+网络名称：DSN
   
-21. [《Few-Shot Learning with Graph Neural Networks》](https://arxiv.org/pdf/1711.04043.pdf)
+文章来源：CVPR2020
 
-  网络名称：GNN
+[源码地址](https://github.com/chrysts/dsn_fewshot)
   
-  文章来源：ICLR2018
+  
+- [《Learning Embedding Adaptation for Few-Shot Learning》](https://arxiv.org/pdf/1812.03664v2.pdf)
 
-  [源码地址](https://github.com/vgsatorras/few-shot-gnn)
+
+网络名称：FEAT
+
+[源码地址](https://github.com/Sha-Lab/FEAT)
+  
+  
+- [《TapNet: Neural Network Augmented with Task-Adaptive Projection for Few-Shot Learning》](https://arxiv.org/pdf/1905.06549v1.pdf)
+
+
+网络名称：TapNet
+  
+文章来源：ICML2019
+
+源码地址：尚未开源
+ 
+  
+- [《Few-Shot Learning with Embedded Class Models and Shot-Free Meta Training》](https://arxiv.org/pdf/1905.04398v1.pdf)
+
+
+网络名称：Shot-Free
+  
+文章来源：ICCV 2019
+
+源码地址：尚未开源
+
+  
+- [《Few-Shot Learning with Graph Neural Networks》](https://arxiv.org/pdf/1711.04043.pdf)
+
+
+网络名称：GNN
+  
+文章来源：ICLR2018
+
+[源码地址](https://github.com/vgsatorras/few-shot-gnn)
+  
   
 22. [《Transductive Episodic-Wise Adaptive Metric for Few-Shot Learning》](https://arxiv.org/pdf/1910.02224.pdf)]
 
