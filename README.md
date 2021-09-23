@@ -555,7 +555,7 @@ RCNN的不足之处就是：
     * [源码地址](https://github.com/EliSchwartz/DeltaEncoder)
 
 ### 基于语义信息的小样本学习算法
-- [《Large-Scale Few-Shot Learning: Knowledge Transfer With Class Hierarchy》]()https://www.researchgate.net/profile/Zhiwu_Lu2/publication/333602008_Large-Scale_Few-Shot_Learning_Knowledge_Transfer_With_Class_Hierarchy/links/5cf61bffa6fdcc847502e9de/Large-Scale-Few-Shot-Learning-Knowledge-Transfer-With-Class-Hierarchy.pdf
+- [《Large-Scale Few-Shot Learning: Knowledge Transfer With Class Hierarchy》](https://www.researchgate.net/profile/Zhiwu_Lu2/publication/333602008_Large-Scale_Few-Shot_Learning_Knowledge_Transfer_With_Class_Hierarchy/links/5cf61bffa6fdcc847502e9de/Large-Scale-Few-Shot-Learning-Knowledge-Transfer-With-Class-Hierarchy.pdf)
     * 文章来源：CVPR2019
     * 源码地址：尚未开源
   
@@ -637,7 +637,7 @@ RCNN的不足之处就是：
     * 文章来源：CVPR 2018
     * 源码地址：尚未开源
   
-- [《Boosting Few-Shot Visual Learning with Self-Supervision》](ttps://arxiv.org/pdf/1906.05186v1.pdf)
+- [《Boosting Few-Shot Visual Learning with Self-Supervision》](https://arxiv.org/pdf/1906.05186v1.pdf)
     * 文章来源：ICCV 2019
     * 源码地址：尚未开源
   
@@ -874,9 +874,9 @@ CVAT 具有我们已经考虑过的工具中最广泛的功能集。特别是，
 
 ### hasty.ai
 
-![](/pictrue/hasty.png)
+![](/picture/hasty.png)
 
-与上述所有工具不同，hasty.ai 不是免费的开源服务，但由于所谓的对象检测和分割的 AI 助手，它非常方便地标记数据。自动支持允许您显着加快注释过程，因为在标记期间辅助模型正在训练。换句话说，标记的图像越多，助手的工作就越准确。我们将在下面看一个例子来说明它是如何工作的。
+与上述所有工具不同，[hasty.ai](https://hasty.ai/)不是免费的开源服务，但由于所谓的对象检测和分割的 AI 助手，它非常方便地标记数据。自动支持允许您显着加快注释过程，因为在标记期间辅助模型正在训练。换句话说，标记的图像越多，助手的工作就越准确。我们将在下面看一个例子来说明它是如何工作的。
 
 您也可以免费试用此服务。该试验提供 3000 积分，足以为一个物体检测任务自动生成大约 3000 个物体的建议标签。
 
