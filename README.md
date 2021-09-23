@@ -832,7 +832,7 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 
 ### Mini-ImageNet
 
-- [PaperCode])https://paperswithcode.com/dataset/miniimagenet-1)
+- [PaperCode](https://paperswithcode.com/dataset/miniimagenet-1)
 
 - [DeepAI](https://deepai.org/dataset/imagenet)
 
