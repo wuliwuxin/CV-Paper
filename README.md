@@ -838,7 +838,7 @@ PASCAL VOC数据集是目标检测领域比较知名的数据集，该数据集�
 
 ### Caltech-UCSD Birds 200
 
-- [官方网站]（http://www.vision.caltech.edu/visipedia/CUB-200.html）
+- [官方网站](http://www.vision.caltech.edu/visipedia/CUB-200.html)
 
 - Caltech-UCSD Birds 200 (CUB-200) 是一个图像数据集，包含 200种鸟类（主要是北美）的照片。
     * 类别数：200
